@@ -185,7 +185,7 @@ This guide tells you how to claim tasks (issues), how to pick up work, the exact
 
 ### 加分规则与激励
 
-- 积极 assign yourself 的 issue：+5 分（当实现该 issue 的 PR 合并后计分）。我们会在合并后统计并分配积分。
+- 积极 assign yourself 的 issue：+5 分（当实现该 issue 的 PR 合并后计分）。
 - 被我们 assign 的 issue：+3 分 (同上)
 
 ### 维护者联系方式

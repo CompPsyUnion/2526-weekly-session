@@ -1,0 +1,12 @@
+{
+    "cSpell.words": [
+        "autopep",
+        "cleanup",
+        "isort",
+        "Pylance"
+    ],
+    "markdownlint.config": {
+        "no-bare-urls": false,
+        "first-line-h1": false
+    }
+}

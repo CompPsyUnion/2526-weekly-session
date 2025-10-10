@@ -105,7 +105,7 @@ This guide tells you how to claim tasks (issues), how to pick up work, the exact
 
 欢迎 — 感谢你为 2526-weekly-session 仓库做贡献。
 
-本文档描述如何领取任务（Issues）、如何贡献内容、分支命名、PR 工作流、以及我们如何统计指派奖励（+5 分）。请严格按照步骤操作，以便团队统一管理和审查。
+本文档描述如何领取任务（Issues）、如何贡献内容、分支命名、PR 工作流、以及我们如何统计指派奖励。请严格按照步骤操作，以便团队统一管理和审查。
 
 ### 仓库摘要
 

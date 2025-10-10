@@ -8,18 +8,18 @@ Welcome — thank you for contributing to the 2526-weekly-session repository.
 
 This guide tells you how to claim tasks (issues), how to pick up work, the exact contribution workflow (fork, branch, edit, PR), the scoring rule for assigning issues, and repository structure information.
 
-Repository summary
+### Repository summary
 
 - Repository: `2526-weekly-session`
 - Purpose: Collect and maintain session schedules, notes, and materials for 2526 Weekly Session. All course material files are stored in `Contents/` (organized by individual course); `Routes/` provides routing guidance documents for each weekly session (organized by session).
 
-Claiming tasks (Issue pickup)
+### Claiming tasks (Issue pickup)
 
-- Browse the repository Issues on GitHub. Look for issues labelled `good first issue`, `content`, `session`, or other open tasks.
-- To claim a task, click "Assign yourself" on the issue (if available) or add a comment like "I will take this". Assigning yourself proactively is encouraged — it grants +5 points in our contributor scoring system (points are recorded when the PR that implements the issue is merged).
-- We use GitHub Milestones to schedule and prioritize work. If an issue already includes a milestone, take note. If you need scheduling, ask in the issue comment.
+- Browse the repository Issues on GitHub. If you're interested in contributing a talk or new material, you may also open a new issue proposing the idea; maintainers will review and decide whether to accept it.
+- To claim a task, click "Assign yourself" on the issue (if available), or add a comment like "I will take this". Actively assigning yourself is encouraged and awards +5 CPU Tech Team points when the implementing PR is merged. If you are assigned by maintainers, that counts as +3 points.
+- We use GitHub Milestones to schedule and prioritize work. If a milestone is added to the issue in which you are assigned, please note the deadline and complete course materials on time. If you want your issue to be scheduled, please request it in the issue comment.
 
-Contribution process (step-by-step)
+### Contribution process (step-by-step)
 
 1. Fork the repository
 
@@ -37,7 +37,8 @@ Contribution process (step-by-step)
 
    - Session materials, images, and related assets must be placed under `Contents/<your-course>`.
    - In `Contents/<your-course>` add a `README.md` that describes the course outline and goals.
-   - Use lowercase, kebab-case filenames for other files, e.g. `s2-quantum-scheduling.md`.
+   - Folder naming: use PascalCase for directories under `Contents/`, e.g. `LinearAlgebra`, `MachineLearning`.
+   - Use lowercase, kebab-case filenames for individual files, e.g. `vscode-lecture.md`.
    - If you have images, put them in `Contents/<your-course>/images/` and reference them from your markdown.
 
    Note: this placement and naming convention is authoritative for all content in this repository.
@@ -45,7 +46,7 @@ Contribution process (step-by-step)
 4. Commit and push to your fork
 
    - Keep commit messages clear. We follow Angular / Conventional Commits style: use a type, optional scope, and a short imperative subject.
-     Examples: `feat(s2): add quantum scheduling notes`, `fix(content): correct image path (Fixes #123)`, `docs: update README`.
+     Examples: `feat(s2): add vscode-lecture notes`, `fix(content): correct image path (Fixes #123)`, `docs: update README`.
    - Using VS Code (GUI):
      - Open the Source Control view (Ctrl+Shift+G). Stage changes by clicking the + icon next to files, or use the ellipsis menu (···) -> "Stage All Changes".
      - Enter a clear commit message in the message box and click the checkmark to commit.
@@ -87,7 +88,7 @@ Contribution process (step-by-step)
 
 - Are changes limited to the scope of the issue?
 - Are new files placed under `Contents/` with reasonable names?
-- Are images stored under `Contents/` with reasonable sizes?
+- Are images stored under `Contents/<...>/images` with reasonable sizes?
 - No secrets or sensitive data included.
 - If the PR fixes an issue, does it reference `Fixes #...`?
 
@@ -113,9 +114,9 @@ Contribution process (step-by-step)
 
 ### 领取任务（Issue）
 
-- 在 GitHub Issues 中查找任务。如果你对一些内容有兴趣，也可以选择提出一个新的 issue。
-- 领取任务：在 issue 页面点击 "Assign yourself"（如果可用），或在评论中写明你将承担此任务。主动 assign 将获得 +5 CPU 技术部积分（PR 合并后计分），被动 assign 将获得 +3 分。
-- 我们使用 Milestone 进行排期。若 issue 已设置里程碑，请注意；若需要排期，请在 issue 中请求。
+- 在 GitHub Issues 中查找任务。如果你对一些内容有兴趣，想讲的话，也可以选择提出一个新的 issue。我们会查看并决定是否采纳。
+- 领取任务：在 issue 页面点击 "Assign yourself"（如果可用），或在评论中写明你将承担此任务。主动 assign 且最终完成结果良好，将获得 +5 CPU 技术部积分（最终 PR 合并后计分），被动 assign 最终完成后将获得 +3 分。
+- 我们使用 Milestone 进行排期。若属于你的 issue 已设置里程碑，请注意要按时补全课程详细内容；若需要排期，请在 issue 中 comment 请求。
 
 ### 贡献流程（逐步）
 
@@ -128,7 +129,6 @@ Contribution process (step-by-step)
    - 分支命名约定：`feature/<你的名字>-<简短描述>`（新内容）；`fix/<你的名字>-<简短描述>`（修复）。
    - 示例：`feature/hnrobert-vscode-setup`
    - 使用 VS Code（图形界面）：
-
      - 克隆你的 Fork：在 GitHub Fork 页面点击 "Code" 复制仓库地址；在 VS Code 中按 F1 -> "Git: Clone"，粘贴地址并选择本地文件夹，克隆完成后打开仓库。
      - 创建分支：在状态栏点击当前分支名，选择 "Create Branch..."，输入 `feature/<你的名字>-<简短描述>` 并回车。
 
@@ -136,13 +136,14 @@ Contribution process (step-by-step)
 
    - 会话材料、图片等都应该放在 `Contents/<你的课程>` 下。
    - 在 `Contents/<你的课程>` 添加一个 `README.md` 介绍课程大纲和目标。
-   - 其他文件名建议使用小写与中横线，例如 `s2-quantum-scheduling.md`。
+   - 文件夹命名：`Contents/` 下的目录请使用大驼峰（PascalCase），例如 `LinearAlgebra`、`MachineLearning`。
+   - 其他文件名建议使用小写与中横线，例如 `vscode-lecture.md`。
    - 如有图片，放在 `Contents/<你的课程>/images/`，然后在你的 markdown 中引用即可。
 
 4. 提交并推送到你的 fork
 
    - Commit 信息清晰：我们使用 Angular / Conventional Commits 规范：type(scope?): subject。
-     示例：`feat(s2): 新增量子排期会话材料`、`fix(content): 修复图片路径 (Fixes #123)`、`docs: 更新 README`。
+     示例：`feat(s2): add vscode-lecture notes`, `fix(content): correct image path (Fixes #123)`, `docs: update README`.
    - 使用 VS Code（图形界面）：
      - 打开 Source Control（Ctrl+Shift+G），将要提交的文件点击 + 进行暂存，或使用菜单中的 "Stage All Changes"。
      - 在提交消息框中输入消息，点击对勾提交。
@@ -156,7 +157,7 @@ Contribution process (step-by-step)
 
 6. 审查与处理反馈
 
-   - 维护者/审阅者会在 PR 中提出建议或修改请求。请在同一分支下 push 新提交来处理这些反馈。
+   - 维护者会在 PR 中提出建议或修改请求。请在同一分支下 push 新提交来处理这些反馈。
    - 如需帮助，可在 PR 中提问。
 
 7. 合并与清理
@@ -178,7 +179,7 @@ Contribution process (step-by-step)
 
 - 新文件是否放在 `Contents/` 并命名合理？
 - Markdown 是否能正确渲染？（无断链或损坏图片）
-- 图片是否储存在 `Contents/`，且尺寸/分辨率合适？
+- 图片是否储存在 `Contents/<...>/images`，且尺寸/分辨率合适？
 - 是否无意提交敏感信息或私有数据？
 - 若修复 issue，PR 是否关联 `Fixes #...`？
 

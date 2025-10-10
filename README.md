@@ -16,7 +16,7 @@
 
 ### Quick start (fork + local preview)
 
-The complete, step-by-step contribution workflow (fork → branch → edit `Contents/` → PR) is documented in `CONTRIBUTING.md` (authoritative). Please read `CONTRIBUTING.md` for VS Code GUI instructions and repository conventions.
+The complete, step-by-step contribution workflow (fork → branch → edit `Contents/` → PR) is documented in `CONTRIBUTING.md`. Please read `CONTRIBUTING.md` for VS Code GUI instructions and repository conventions.
 
 #### Short summary
 
@@ -45,7 +45,7 @@ See `CONTRIBUTING.md` for details and examples.
 
 ### 快速使用（Fork + 本地预览）
 
-仓库的完整贡献工作流（Fork → 分支 → 在 `Contents/` 编辑 → PR）请参见 `CONTRIBUTING.md`（权威说明）。在 `CONTRIBUTING.md` 可查看逐步操作与 VS Code GUI 示例。
+仓库的完整贡献工作流（Fork → 分支 → 在 `Contents/` 编辑 → PR）请参见 `CONTRIBUTING.md`。在 `CONTRIBUTING.md` 可查看逐步操作与 VS Code GUI 示例。
 
 #### 简要步骤
 

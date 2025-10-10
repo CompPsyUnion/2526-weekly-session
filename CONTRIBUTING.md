@@ -1,8 +1,8 @@
 # Contribution Guide
 
-[English](#en-gb) | [简体中文](#zh-cn)
+[English](#en-us) | [简体中文](#zh-cn)
 
-## en-GB
+## en-US
 
 Welcome — thank you for contributing to the 2526-weekly-session repository.
 

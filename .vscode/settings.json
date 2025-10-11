@@ -1,9 +1,15 @@
 {
     "cSpell.words": [
+        "analyzer",
         "autopep",
+        "bierner",
+        "Cers",
         "cleanup",
+        "ipynb",
         "isort",
-        "Pylance"
+        "Pylance",
+        "toolsai",
+        "yzhang"
     ],
     "markdownlint.config": {
         "no-bare-urls": false,

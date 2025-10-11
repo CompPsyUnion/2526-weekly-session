@@ -1,0 +1,5 @@
+# macOS Finder metadata
+.DS_Store
+
+# Ignore .DS_Store in any subdirectory as well
+**/.DS_Store

@@ -1,0 +1,35 @@
+Title: Implement a function to determine whether a string is a palindrome.
+
+A palindrome is a string that reads the same forward and backward, for example: "level", "noon".
+
+Solution idea:
+
+1. Remove spaces and ignore case
+   Use str.lower() and str.replace() to preprocess the input.
+
+2. Two-pointer method
+   Use two pointers starting from both ends of the string moving toward the center and compare characters.
+
+Code implementation:
+
+```python
+def is_palindrome(s):
+    s = s.lower().replace(' ', '')
+    return s == s[::-1]
+```
+
+# Test cases
+print(is_palindrome("Level"))      # True
+print(is_palindrome("Hello"))      # False
+print(is_palindrome("A man a plan a canal Panama"))  # True
+
+Task list:
+- Handle case sensitivity (done)
+- Remove spaces (done)
+- Use slicing to reverse the string (done)
+- Handle punctuation (optional extension, not completed)
+
+Summary:
+Palindrome checking is a common string-processing problem. It's important to master text preprocessing and slicing techniques.
+Don't forget to consider edge cases such as an empty string or a single-character string.
+Practicing multiple implementations will improve coding skills!

@@ -119,63 +119,63 @@ VSCode 支持用户级与工作区级设置。使用 JSON 编辑更精确。
 
 - 代码质量与语言：(可以按照你的需要选择安装) ⬇️
 
-  - `ms-python.python` # Python 语言支持
+  - `ms-python.python` (Python 语言支持)
 
-    - `ms-python.autopep8` # 自动格式化代码
-    - `ms-python.isort` # 自动排序 import 语句
-    - `ms-python.vscode-pylance` # 静态代码检查
+    - `ms-python.autopep8` (自动格式化代码)
+    - `ms-python.isort` (自动排序 import 语句)
+    - `ms-python.vscode-pylance` (静态代码检查)
 
-  - `ms-toolsai.jupyter` # Jupyter Notebook 支持
-  - `ms-vscode.cpptools-extension-pack` # C/C++ 支持
-  - `ms-vscode.cmake-tools` # CMake 支持
-  - `ms-vscode.makefile-tools` # Makefile 支持
-  - `ms-vscode.go` # Go 语言支持
-  - `DavidAnson.vscode-markdownlint` # Markdown 语法检查
-  - `bierner.markdown-mermaid` # markdown 支持 mermaid 流程图
-  - `yzhang.markdown-all-in-one` # Markdown 增强，可选
+  - `ms-toolsai.jupyter` (Jupyter Notebook 支持)
+  - `ms-vscode.cpptools-extension-pack` (C/C++ 支持)
+  - `ms-vscode.cmake-tools` (CMake 支持)
+  - `ms-vscode.makefile-tools` (Makefile 支持)
+  - `ms-vscode.go` (Go 语言支持)
+  - `DavidAnson.vscode-markdownlint` (Markdown 语法检查)
+  - `bierner.markdown-mermaid` (markdown 支持 mermaid 流程图)
+  - `yzhang.markdown-all-in-one` (Markdown 增强，可选)
 
 - 啥项目都能用的 ⬇️
 
   - 远程开发
 
-    - `ms-vscode-remote.remote-ssh` # 远程 SSH
-    - `ms-vscode-remote.remote-ssh-edit` # 远程 SSH 编辑
-    - `ms-vscode-remote.remote-containers` # 远程容器
-    - `ms-vscode.remote-explorer` # 远程资源管理器
-    - `ms-vscode.remote-server` # 远程隧道 （支持非局域网设备远程连接）
+    - `ms-vscode-remote.remote-ssh` (远程 SSH)
+    - `ms-vscode-remote.remote-ssh-edit` (远程 SSH 编辑)
+    - `ms-vscode-remote.remote-containers` (远程容器)
+    - `ms-vscode.remote-explorer` (远程资源管理器)
+    - `ms-vscode.remote-server` (远程隧道 （支持非局域网设备远程连接）)
 
   - 报错 inline 显示
 
-    - `usernamehw.errorlens` # 报错 inline 显示
+    - `usernamehw.errorlens` (报错 inline 显示)
 
   - 文件图标
 
-    - `PKief.material-icon-theme` # 文件图标主题
+    - `PKief.material-icon-theme` (文件图标主题)
 
   - Git / GitHub 相关
 
-    - `eamodio.gitlens` # Git 增强 / inline 显示
-    - `codezombiech.gitignore` # .gitignore 模版支持
-    - `github.vscode-pull-request-github` # GitHub PR 管理
-    - `github.vscode-github-actions` # GitHub Actions 支持
-    - `github.copilot` # AI 编程助手 （GitHub Education 免费申请教程请移步 [这里](https://github.com/unnc-aim/aim-tutorial/tree/main/GitHubEducation)）
-    - `github.copilot-chat` # AI 编程助手聊天
+    - `eamodio.gitlens` (Git 增强 / inline 显示)
+    - `codezombiech.gitignore` (.gitignore 模版支持)
+    - `github.vscode-pull-request-github` (GitHub PR 管理)
+    - `github.vscode-github-actions` (GitHub Actions 支持)
+    - `github.copilot` (AI 编程助手)
+    - `github.copilot-chat` (AI 编程助手聊天)
 
   - 拼写检查
 
-    - `streetsidesoftware.code-spell-checker` # 拼写检查
+    - `streetsidesoftware.code-spell-checker` (拼写检查)
 
   - 本地路径智能提示
 
-    - `christian-kohler.path-intellisense` # 路径补全
+    - `christian-kohler.path-intellisense` (路径补全)
 
   - 容器相关
 
-    - `ms-azuretools.vscode-containers` # 容器工具
+    - `ms-azuretools.vscode-containers` (容器工具)
 
   - 实时协作
 
-    - `ms-vsliveshare.vsliveshare` # 实时协作开发
+    - `ms-vsliveshare.vsliveshare` (实时协作开发)
 
 > 其他拓展也可以参考别的类似教程，但要注意请**按需安装**，避免扩展过多影响性能。
 

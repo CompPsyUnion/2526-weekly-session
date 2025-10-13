@@ -16,12 +16,12 @@
 
 ### Quick start (fork + local preview)
 
-The complete, step-by-step contribution workflow (fork → branch → edit `Contents/` → PR) is documented in [CONTRIBUTING.md](./CONTRIBUTING.md). Please read `CONTRIBUTING.md` for VS Code GUI instructions and repository conventions.
+The complete, step-by-step contribution workflow (fork → branch → edit `Contents/` → PR) is documented in [CONTRIBUTING.md](./CONTRIBUTING.md). Please read `CONTRIBUTING.md` for VSCode GUI instructions and repository conventions.
 
 #### Short summary
 
 - Fork the repo on GitHub.
-- Clone your fork into VS Code.
+- Clone your fork into VSCode.
 - Create a feature branch and edit files under `Contents/<your-course>/`.
 - Commit, publish the branch, and open a PR to `CompPsyUnion/main`.
 
@@ -45,12 +45,12 @@ See `CONTRIBUTING.md` for details and examples.
 
 ### 快速使用（Fork + 本地预览）
 
-仓库的完整贡献工作流（Fork → 分支 → 在 `Contents/` 编辑 → PR）请参见 [CONTRIBUTING.md](./CONTRIBUTING.md)。在 `CONTRIBUTING.md` 可查看逐步操作与 VS Code GUI 示例。
+仓库的完整贡献工作流（Fork → 分支 → 在 `Contents/` 编辑 → PR）请参见 [CONTRIBUTING.md](./CONTRIBUTING.md)。在 `CONTRIBUTING.md` 可查看逐步操作与 VSCode GUI 示例。
 
 #### 简要步骤
 
 - 在 GitHub 上 Fork 本仓库。
-- 在 VS Code 中克隆你的 Fork。
+- 在 VSCode 中克隆你的 Fork。
 - 创建 feature 分支并在 `Contents/<你的课程>/` 下编辑或新增文件。
 - 提交、发布分支并发起 PR 到 `CompPsyUnion/main`。
 

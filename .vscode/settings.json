@@ -5,10 +5,17 @@
         "bierner",
         "Cers",
         "cleanup",
+        "codezombiech",
+        "cpptools",
+        "eamodio",
+        "errorlens",
+        "formulahendry",
         "ipynb",
         "isort",
+        "Kief",
         "Pylance",
         "toolsai",
+        "usernamehw",
         "yzhang"
     ],
     "markdownlint.config": {

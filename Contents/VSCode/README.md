@@ -35,7 +35,7 @@ Visual Studio Code (VSCode) is a lightweight, extensible, cross-platform code ed
 
 ## Installation and Launch
 
-- Official download: <https://code.visualstudio.com/>
+- Official download: https://code.visualstudio.com/
 - macOS: .zip or .dmg, drag to Applications
 - Windows: User/System installers (.exe)
 - Linux: .deb / .rpm / snap / apt sources
@@ -122,9 +122,9 @@ Suggested extensions:
 - Language and tooling (choose as needed):
 
   - `ms-python.python` (Python support)
-    - `ms-python.autopep8` (auto format)
-    - `ms-python.isort` (import sorting)
-    - `ms-python.vscode-pylance` (static analysis)
+  - `ms-python.autopep8` (auto format)
+  - `ms-python.isort` (import sorting)
+  - `ms-python.vscode-pylance` (static analysis)
   - `ms-toolsai.jupyter` (Jupyter)
   - `ms-vscode.cpptools-extension-pack` (C/C++)
   - `ms-vscode.cmake-tools` (CMake)
@@ -135,19 +135,47 @@ Suggested extensions:
   - `yzhang.markdown-all-in-one` (Markdown enhancements)
 
 - Useful for most projects:
-  - Remote development
+
+  - Remote development:
+
     - `ms-vscode-remote.remote-ssh` (Remote SSH)
     - `ms-vscode-remote.remote-ssh-edit` (SSH editing)
     - `ms-vscode-remote.remote-containers` (Dev Containers)
     - `ms-vscode.remote-explorer` (Remote explorer)
     - `ms-vscode.remote-server` (Remote tunnels)
-  - Inline error display: `usernamehw.errorlens`
-  - File icons: `PKief.material-icon-theme`
-  - Git/GitHub: `eamodio.gitlens`, `codezombiech.gitignore`, `github.vscode-pull-request-github`, `github.vscode-github-actions`, `github.copilot`, `github.copilot-chat`
-  - Spell checking: `streetsidesoftware.code-spell-checker`
-  - Path intellisense: `christian-kohler.path-intellisense`
-  - Containers: `ms-azuretools.vscode-containers`
-  - Live Share: `ms-vsliveshare.vsliveshare`
+
+  - Inline error display:
+
+    - `usernamehw.errorlens` (inline error display)
+
+  - File icons:
+
+    - `PKief.material-icon-theme` (file icon theme)
+
+  - Git / GitHub related:
+
+    - `eamodio.gitlens` (Git enhancements / inline blame)
+    - `codezombiech.gitignore` (.gitignore templates)
+    - `github.vscode-pull-request-github` (GitHub PRs)
+    - `github.vscode-github-actions` (GitHub Actions integration)
+    - `github.copilot` (AI coding assistant)
+    - `github.copilot-chat` (Copilot chat)
+
+  - Spell checking:
+
+    - `streetsidesoftware.code-spell-checker` (spell checker)
+
+  - Path intellisense:
+
+    - `christian-kohler.path-intellisense` (path completion)
+
+  - Containers:
+
+    - `ms-azuretools.vscode-containers` (container tools)
+
+  - Live Share:
+
+    - `ms-vsliveshare.vsliveshare` (real-time collaboration)
 
 > Don't install too many extensions — pick what you need to avoid performance issues.
 
@@ -229,13 +257,16 @@ Node.js example:
 }
 ```
 
-Python (with Microsoft Python extension): use the debug panel to create configurations; features include breakpoints, variable windows, Step Over/Into, and a REPL.
+Python (with Microsoft Python extension):
+
+- use the debug panel to create configurations, choose Python.
+- features include breakpoints, variable windows, Step Over/Into, and a REPL.
 
 ---
 
 ## Integrated Terminal and Tasks
 
-- Toggle terminal: `` Ctrl + ` ``
+- Toggle terminal: `` Ctrl/Cmd + ` ``
 - Multiple terminals and shell selection (bash, zsh, PowerShell)
 - Tasks (`tasks.json`) for build and automation; example:
 
@@ -286,7 +317,7 @@ Run tasks via Terminal → Run Task or via shortcut (configurable)
 
 ## Resources and Learning Path
 
-- Official docs: <https://code.visualstudio.com/docs>
+- Official docs: https://code.visualstudio.com/docs
 - Guides on debugging, extension development, and themes are available on the official site
 - Recommended practice: use ESLint + Prettier and format before CI runs
 

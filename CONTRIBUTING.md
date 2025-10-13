@@ -29,8 +29,8 @@ This guide tells you how to claim tasks (issues), how to pick up work, the exact
 
    - Branch naming convention: `feature/<your-name>-<short-desc>` for new content; `fix/<your-name>-<short-desc>` for fixes.
    - Example: `feature/alice-data-ethics-session`
-   - Using VS Code (GUI):
-     - Clone your fork: on GitHub click the "Code" button on your fork, copy the URL; in VS Code open the Command Palette (F1) -> "Git: Clone", paste the URL, choose a local folder, then open the cloned repository.
+   - Using VSCode (GUI):
+     - Clone your fork: on GitHub click the "Code" button on your fork, copy the URL; in VSCode open the Command Palette (F1) -> "Git: Clone", paste the URL, choose a local folder, then open the cloned repository.
      - Create a branch: click the current branch name in the status bar (bottom-left) and choose "Create Branch...", or run "Git: Create Branch..." from the Command Palette and enter `feature/<your-name>-<short-desc>`.
 
 3. Add or edit files under `Contents/`
@@ -47,13 +47,13 @@ This guide tells you how to claim tasks (issues), how to pick up work, the exact
 
    - Keep commit messages clear. We follow Angular / Conventional Commits style: use a type, optional scope, and a short imperative subject.
      Examples: `feat(s2): add vscode-lecture notes`, `fix(content): correct image path (Fixes #123)`, `docs: update README`.
-   - Using VS Code (GUI):
+   - Using VSCode (GUI):
      - Open the Source Control view (Ctrl+Shift+G). Stage changes by clicking the + icon next to files, or use the ellipsis menu (···) -> "Stage All Changes".
      - Enter a clear commit message in the message box and click the checkmark to commit.
      - Publish or push the branch: click "Publish Branch" in the status bar or use the ellipsis menu -> "Push". If prompted, choose your fork as the remote.
 
 5. Open a Pull Request (PR)
-   Using VS Code (GUI):
+   Using VSCode (GUI):
 
    - Open a PR from your fork branch into `CompPsyUnion/2526-weekly-session:main`.
    - PR title style: follow Conventional Commits (e.g. `feat(s2): short description` or `fix(scope): short description`).
@@ -75,7 +75,7 @@ This guide tells you how to claim tasks (issues), how to pick up work, the exact
 
 8. Keep your fork synced with upstream
 
-   - Using VS Code (GUI) / GitHub web:
+   - Using VSCode (GUI) / GitHub web:
 
      - Add or verify the upstream remote: open Source Control -> ellipsis (···) -> "Remote" -> "Add Remote..." and enter the upstream URL `https://github.com/CompPsyUnion/2526-weekly-session.git` with the name `upstream`.
      - Fetch upstream: ellipsis -> "Fetch" and select `upstream`.
@@ -128,8 +128,8 @@ This guide tells you how to claim tasks (issues), how to pick up work, the exact
 
    - 分支命名约定：`feature/<你的名字>-<简短描述>`（新内容）；`fix/<你的名字>-<简短描述>`（修复）。
    - 示例：`feature/hnrobert-vscode-setup`
-   - 使用 VS Code（图形界面）：
-     - 克隆你的 Fork：在 GitHub Fork 页面点击 "Code" 复制仓库地址；在 VS Code 中按 F1 -> "Git: Clone"，粘贴地址并选择本地文件夹，克隆完成后打开仓库。
+   - 使用 VSCode（图形界面）：
+     - 克隆你的 Fork：在 GitHub Fork 页面点击 "Code" 复制仓库地址；在 VSCode 中按 F1 -> "Git: Clone"，粘贴地址并选择本地文件夹，克隆完成后打开仓库。
      - 创建分支：在状态栏点击当前分支名，选择 "Create Branch..."，输入 `feature/<你的名字>-<简短描述>` 并回车。
 
 3. 在 `Contents/` 新增或编辑文件
@@ -144,10 +144,10 @@ This guide tells you how to claim tasks (issues), how to pick up work, the exact
 
    - Commit 信息清晰：我们使用 Angular / Conventional Commits 规范：type(scope?): subject。
      示例：`feat(s2): add vscode-lecture notes`, `fix(content): correct image path (Fixes #123)`, `docs: update README`.
-   - 使用 VS Code（图形界面）：
+   - 使用 VSCode（图形界面）：
      - 打开 Source Control（Ctrl+Shift+G），将要提交的文件点击 + 进行暂存，或使用菜单中的 "Stage All Changes"。
      - 在提交消息框中输入消息，点击对勾提交。
-     - 点击状态栏的 "Publish Branch" 或在菜单中选择 "Push"，将分支推送到你的 Fork。使用 "GitHub Pull Requests and Issues" 扩展可以直接在 VS Code 中创建 PR。
+     - 点击状态栏的 "Publish Branch" 或在菜单中选择 "Push"，将分支推送到你的 Fork。使用 "GitHub Pull Requests and Issues" 扩展可以直接在 VSCode 中创建 PR。
 
 5. 创建 Pull Request（PR）
 
@@ -167,9 +167,9 @@ This guide tells you how to claim tasks (issues), how to pick up work, the exact
 
 8. 同步你的 fork 与上游
 
-   - 使用 VS Code（图形界面）/ GitHub web：
+   - 使用 VSCode（图形界面）/ GitHub web：
 
-     - 在 VS Code 中通过 Source Control 的远程 (Remotes) 设置添加 `upstream`：Source Control -> ellipsis (···) -> "Remote" -> "Add Remote..."，输入名称 `upstream` 和 URL `https://github.com/CompPsyUnion/2526-weekly-session.git`。
+     - 在 VSCode 中通过 Source Control 的远程 (Remotes) 设置添加 `upstream`：Source Control -> ellipsis (···) -> "Remote" -> "Add Remote..."，输入名称 `upstream` 和 URL `https://github.com/CompPsyUnion/2526-weekly-session.git`。
      - 点击 ellipsis -> "Fetch" 并选择 `upstream` 来获取上游更新。切换到你的 `main` 分支后，通过分支菜单选择 "Merge Branch..." 并选择 `upstream/main` 完成合并。
      - 合并完成后使用 "Push" 将更新推送到你的 Fork 的 `main`。
 

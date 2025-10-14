@@ -1,0 +1,243 @@
+/*
+ * @theme phycat-orange
+ * Typora / Marp compatible theme built on Phycat palette
+ */
+
+@import url(./phycat/phycat.light.css);
+
+:root {
+  /* 标题后小图标，借鉴自思源笔记主题——Savor */
+  --h1-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(220, 191, 97, 0.5)' height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M4.8 29.714v0c-1.371 0-2.514-1.143-2.514-2.514v0c0-1.371 1.143-2.514 2.514-2.514v0c1.371 0 2.514 1.143 2.514 2.514v0c0.114 1.371-1.029 2.514-2.514 2.514z'/></svg>") no-repeat center;
+  --h2-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(220, 191, 97, 0.5)' height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M11.429 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286z'/></svg>") no-repeat center;
+  --h3-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(220, 191, 97, 0.5)' height='28' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M4.571 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286z'/></svg>") no-repeat center;
+  --h4-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(220, 191, 97, 0.5)' height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M4.571 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 22.857c1.257 0 2.286-1.029 2.286-2.286s-1.029-2.286-2.286-2.286-2.286 1.029-2.286 2.286 1.029 2.286 2.286 2.286z'/></svg>") no-repeat center;
+  --h5-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(220, 191, 97, 0.5)' height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M4.571 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 22.857c1.257 0 2.286-1.029 2.286-2.286s-1.029-2.286-2.286-2.286-2.286 1.029-2.286 2.286 1.029 2.286 2.286 2.286zM4.571 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 11.429c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286z'/></svg>") no-repeat center;
+  --h6-r-graphic: url("data:image/svg+xml;utf8,<svg fill='rgba(220, 191, 97, 0.5)' height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M4.571 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM4.571 11.429c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 18.286c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 25.143c-1.257 0-2.286 1.029-2.286 2.286s1.029 2.286 2.286 2.286 2.286-1.029 2.286-2.286-1.029-2.286-2.286-2.286zM11.429 16c1.257 0 2.286-1.029 2.286-2.286s-1.029-2.286-2.286-2.286-2.286 1.029-2.286 2.286 1.029 2.286 2.286 2.286z'/></svg>") no-repeat center;
+
+  /* 是否开启网格背景？1 是；0 否 */
+  --bg-grid: 0;
+
+  /* 已完成的代办事项是否显示删除线？1 是；0 否 */
+  --check-line:1; 
+
+  /* 自动编号格式设置 无需自动编号可全部注释掉或部分注释掉*/
+  /* --autonum-h1: counter(h1) ". ";
+  --autonum-h2: counter(h1) "." counter(h2) ". ";
+  --autonum-h3: counter(h1) "." counter(h2) "." counter(h3) ". ";
+  --autonum-h4: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) ". ";
+  --autonum-h5: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
+  --autonum-h6: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "; */
+
+   /* 下面是文章内Toc目录自动编号，与上面一样即可 */
+  /* --autonum-h1toc: counter(h1toc) ". ";
+  --autonum-h2toc: counter(h1toc) "." counter(h2toc) ". ";
+  --autonum-h3toc: counter(h1toc) "." counter(h2toc) "." counter(h3toc) ". ";
+  --autonum-h4toc: counter(h1toc) "." counter(h2toc) "." counter(h3toc) "." counter(h4toc) ". ";
+  --autonum-h5toc: counter(h1toc) "." counter(h2toc) "." counter(h3toc) "." counter(h4toc) "." counter(h5toc) ". ";
+  --autonum-h6toc: counter(h1toc) "." counter(h2toc) "." counter(h3toc) "." counter(h4toc) "." counter(h5toc) "." counter(h6toc) ". "; */
+
+
+  /* 主题颜色 */
+
+  --head-title-color: #ffc000;
+  /* 标题主色 */
+  --head-title-h2-color: #000;
+  --head-title-h2-background: linear-gradient(to right, #f7ce68, #fbabfe);
+  /* 二级标题主色，因为二级标题是背景色的，所以单独设置 */
+
+  --element-color: #ffc000;
+  /* 元素主色 */
+  --element-color-deep: #ffa531;
+  /* 元素深色 */
+  --element-color-shallow: #fbcf4b;
+  /* 元素浅色 */
+  --element-color-so-shallow: #fb970069;
+  /* 元素很浅色 */
+  --element-color-soo-shallow: #fffaf4;
+  /* 元素非常浅色 */
+
+  --element-color-linecode: #dc3545;
+  /* 行内代码文字色 */
+  --element-color-linecode-background: #ffe7e7;
+  /* 行内代码背景色 */
+
+  /* 程序本体UI */
+
+  --appui-color: #ff6c31;
+  /* 程序UI主题色 */
+  --appui-color-icon: #ff6c31;
+  /* 程序UI图标颜色 */
+  --appui-color-text: #374966;
+  /* 程序UI文字色 */
+  --primary-color: #ff6c31;
+}
+
+html,
+body {
+  background: var(--appui-color, #ff6c31)10;
+}
+
+/* Typora content wrapper */
+#write {
+  max-width: 820px;
+  margin: 0 auto 96px;
+  padding: 56px 72px 72px;
+  background: #ffffffcc;
+  backdrop-filter: blur(4px);
+  border-radius: 16px;
+  box-shadow: 0 28px 68px -45px rgba(55, 73, 102, 0.55);
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  color: var(--primary-color);
+}
+
+#write h2 {
+  background: var(--head-title-h2-background);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+strong {
+  color: var(--primary-color);
+}
+
+code,
+kbd {
+  background: var(--element-color-linecode-background);
+  color: var(--element-color-linecode);
+  padding: 0.2em 0.45em;
+  border-radius: 6px;
+  font-size: 0.95em;
+}
+
+pre {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 108, 49, 0.2);
+  background: rgba(255, 250, 244, 0.92);
+  box-shadow: inset 0 0 0 1px rgba(255, 206, 115, 0.25);
+}
+
+blockquote {
+  border-left: 6px solid var(--primary-color);
+  background: rgba(255, 209, 158, 0.2);
+  padding: 1em 1.4em;
+  border-radius: 0 12px 12px 0;
+  color: #594631;
+}
+
+table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -35px rgba(55, 73, 102, 0.55);
+}
+
+table thead {
+  background: var(--element-color);
+  color: #2f2520;
+}
+
+table tbody tr:nth-child(2n) {
+  background: rgba(255, 242, 213, 0.7);
+}
+
+/* Checkbox accent */
+.task-list-item input {
+  accent-color: var(--primary-color);
+}
+
+/* Marp compatibility -------------------------------- */
+section {
+  background: radial-gradient(circle at 12% 20%, rgba(255, 236, 190, 0.55), transparent 48%),
+    radial-gradient(circle at 88% 16%, rgba(255, 172, 124, 0.35), transparent 52%),
+    radial-gradient(circle at 50% 92%, rgba(255, 216, 168, 0.65), transparent 62%),
+    #fdfaf5;
+  color: #3c2f25;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px 96px;
+  position: relative;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  inset: 56px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  box-shadow: 0 40px 80px -65px rgba(55, 73, 102, 0.8);
+  z-index: -1;
+}
+
+section h1,
+section h2,
+section h3,
+section h4,
+section h5,
+section h6 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+section.lead {
+  align-items: center;
+  text-align: center;
+}
+
+section.lead h1 {
+  font-size: 2.9em;
+  letter-spacing: 0.04em;
+}
+
+section.lead ul {
+  max-width: 580px;
+}
+
+section code {
+  background: rgba(255, 236, 190, 0.55);
+  color: #b3501f;
+}
+
+section pre {
+  background: rgba(57, 42, 33, 0.92);
+  color: #ffe7d4;
+  box-shadow: inset 0 0 0 1px rgba(255, 206, 115, 0.2);
+}
+
+.marpit-section[data-marpit-pagination]::after {
+  color: rgba(131, 87, 45, 0.8);
+}
+
+/* Reveal.js compatibility */
+.reveal section {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  box-shadow: 0 32px 70px -60px rgba(55, 73, 102, 0.8);
+  padding: 64px 90px;
+  color: #3c2f25;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: var(--primary-color);
+}
+
+.reveal pre code {
+  background: rgba(57, 42, 33, 0.92);
+  color: #ffe7d4;
+}
+
+.thanks {
+  margin-top: 48px;
+  font-size: 2.1em;
+  color: var(--primary-color);
+  font-weight: 650;
+}

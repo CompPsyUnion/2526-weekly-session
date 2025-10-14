@@ -1,0 +1,268 @@
+/*
+ * @theme markdown-journey
+ * @author Gentle-Lijie
+ * Marp & Typora compatible theme for Markdown slides
+ */
+
+:root {
+  --bg-color: #f6f7fb;
+  --panel-color: #ffffffee;
+  --primary-color: #1f4b99;
+  --accent-color: #ef8062;
+  --text-color: #1f1f1f;
+  --muted-color: #5c6170;
+  --code-bg: #1e1e2f;
+  --code-text: #f6f7fb;
+  --border-radius: 12px;
+  --shadow: 0 12px 30px -18px rgba(10, 38, 120, 0.35);
+  --font-body: "Source Sans Pro", "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+  --font-mono: "Fira Code", "JetBrains Mono", "Consolas", monospace;
+}
+
+/* Typora global styles */
+html, body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+#write {
+  max-width: 840px;
+  margin: 0 auto 120px;
+  padding: 60px 80px 80px;
+  background: var(--panel-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.typora-export h1,
+#write h1 {
+  font-size: 2.6em;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.6em;
+}
+
+.typora-export h2,
+#write h2 {
+  font-size: 2.1em;
+  font-weight: 650;
+  color: #243b74;
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
+}
+
+.typora-export h3,
+#write h3 {
+  font-size: 1.6em;
+  color: #2d385a;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+}
+
+#write h4,
+#write h5,
+#write h6 {
+  color: var(--muted-color);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+p {
+  margin: 0.6em 0 0.8em;
+}
+
+strong {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+em {
+  color: var(--accent-color);
+}
+
+blockquote {
+  border-left: 6px solid var(--primary-color);
+  background: rgba(31, 75, 153, 0.06);
+  padding: 0.8em 1.4em;
+  color: #2d3954;
+  margin: 1.2em 0;
+}
+
+code,
+kbd {
+  font-family: var(--font-mono);
+  background: rgba(31, 75, 153, 0.14);
+  color: var(--primary-color);
+  padding: 0.15em 0.4em;
+  border-radius: 6px;
+}
+
+pre {
+  font-family: var(--font-mono);
+  background: var(--code-bg);
+  color: var(--code-text);
+  border-radius: var(--border-radius);
+  padding: 1.1em 1.4em;
+  border: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+ul,
+ol {
+  padding-left: 1.3em;
+  margin: 0.6em 0 1em;
+}
+
+ul ul,
+ol ol {
+  margin-top: 0.3em;
+  margin-bottom: 0.4em;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(239, 128, 98, 0.35);
+}
+
+a:hover {
+  color: #c35d42;
+  border-bottom-color: rgba(195, 93, 66, 0.7);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.2em 0;
+  font-size: 0.95em;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+table thead {
+  background: var(--primary-color);
+  color: #f0f5ff;
+}
+
+table th,
+table td {
+  padding: 0.75em 1em;
+  border-bottom: 1px solid rgba(36, 59, 116, 0.12);
+  text-align: left;
+}
+
+table tbody tr:nth-child(even) {
+  background: rgba(31, 75, 153, 0.05);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(31, 75, 153, 0.2), transparent);
+  margin: 2.4em 0;
+}
+
+.task-list-item input {
+  accent-color: var(--accent-color);
+}
+
+.footnote-ref {
+  color: var(--accent-color);
+}
+
+/* Marp slide container */
+section {
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 64px 88px;
+  color: var(--text-color);
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  inset: 48px;
+  background: var(--panel-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  z-index: -1;
+}
+
+section > h1,
+section > h2,
+section > h3 {
+  margin-top: 0;
+}
+
+section.lead {
+  align-items: center;
+  text-align: center;
+}
+
+section.lead h1 {
+  font-size: 2.8em;
+  color: var(--primary-color);
+  margin-bottom: 0.3em;
+}
+
+section.lead p,
+section.lead ul {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+section .thanks {
+  margin-top: 48px;
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+section code,
+section pre {
+  border-radius: var(--border-radius);
+}
+
+section pre code {
+  font-size: 0.95em;
+}
+
+section table {
+  box-shadow: none;
+}
+
+.marpit-section[data-marpit-pagination]
+  ::after {
+  color: var(--muted-color);
+}
+
+/* Reveal.js compatibility adjustments */
+.reveal section {
+  background: var(--panel-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 48px 72px;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: var(--primary-color);
+}
+
+.reveal pre code {
+  background: var(--code-bg);
+  color: var(--code-text);
+}

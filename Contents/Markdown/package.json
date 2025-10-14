@@ -1,0 +1,21 @@
+{
+  "name": "markdown-intro-slides",
+  "version": "1.0.0",
+  "description": "Markdown 入门教程幻灯片（Marp 默认主题）",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-slides.mjs",
+  "start": "marp slides/Markdown入门教程-幻灯.md --allow-local-files --server --watch",
+    "dev": "pnpm run start",
+    "clean": "rimraf dist"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@9.12.2",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.2.3",
+    "rimraf": "^5.0.5"
+  }
+}

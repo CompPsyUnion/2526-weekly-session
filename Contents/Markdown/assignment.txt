@@ -1,0 +1,33 @@
+题目：实现一个函数，判断一个字符串是否为回文串。
+
+回文串是指正着读和反着读都一样的字符串，例如 level、noon。
+
+题解思路：
+
+1. 去除空格和大小写影响
+   使用 str.lower() 和 str.replace() 处理输入。
+
+2. 双指针法
+   用两个指针分别从字符串两端向中间移动，比较字符是否相同。
+
+代码实现：
+
+def is_palindrome(s):
+     s = s.lower().replace(' ', '')
+     return s == s[::-1]
+
+# 测试用例
+print(is_palindrome("Level"))      # True
+print(is_palindrome("Hello"))      # False
+print(is_palindrome("A man a plan a canal Panama"))  # True
+
+任务清单：
+- 处理大小写（已完成）
+- 去除空格（已完成）
+- 使用切片反转字符串（已完成）
+- 处理标点符号（可扩展，未完成）
+
+总结：
+回文判断是字符串处理的常见题型，掌握文本预处理和切片技巧非常重要。
+不要忘记考虑特殊情况，比如空字符串或只有一个字符。
+多练习几种实现方式，可以提升代码能力！

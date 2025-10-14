@@ -31,20 +31,20 @@ Markdown 是一种轻量级标记语言，它允许你使用易读易写的纯�
 
 Markdown 在多个领域都有广泛应用：
 
-### 1. GitHub README
-项目说明文档，介绍项目功能、安装方法、使用说明等。
+1. GitHub README
+> 项目说明文档，介绍项目功能、安装方法、使用说明等。
 
-### 2. 文档说明
-技术文档、API 文档、用户手册等，便于团队协作和知识共享。
+2. 文档说明
+> 技术文档、API 文档、用户手册等，便于团队协作和知识共享。
 
-### 3. 博客撰写
-许多静态博客生成器（如 Hexo、Jekyll、Hugo）都使用 Markdown 作为内容格式。
+3. 博客撰写
+> 许多静态博客生成器（如 Hexo、Jekyll、Hugo）都使用 Markdown 作为内容格式。
 
-### 4. 笔记与知识管理
-Notion、Obsidian、Typora 等工具都支持 Markdown，方便整理和管理知识。
+4. 笔记与知识管理
+> Notion、Obsidian、Typora 等工具都支持 Markdown，方便整理和管理知识。
 
-### 5. 演示文稿
-使用工具如 Marp、Reveal.js 可以将 Markdown 转换为幻灯片。
+5. 演示文稿
+> 使用工具如 Marp、Reveal.js 可以将 Markdown 转换为幻灯片。
 
 ## 编辑器推荐
 
@@ -83,11 +83,14 @@ Notion、Obsidian、Typora 等工具都支持 Markdown，方便整理和管理�
 
 **效果展示：**
 
+
+
 # 一级标题
 ## 二级标题
 ### 三级标题
 
 **注意事项**：
+
 - 保持标题层级的一致性，不要跳级
 - 一级标题通常只使用一次（作为文档标题）
 - `#` 后面要加一个空格
@@ -120,7 +123,8 @@ Markdown 支持多种文本样式：
 **加粗文本**  
 ***粗斜体文本***  
 ~~删除线文本~~  
-<u>下划线文本</u>
+<u>下划线文本</u>  
+==高亮文本==
 
 **使用建议**：
 - 使用加粗来强调重要内容
@@ -326,6 +330,7 @@ hello_world()
 ![UoN Logo](https://www.nottingham.edu.cn/SiteElements/Images/2023-Revamp/Logo/UoN-Logo.jpg)
 
 **图片管理建议**：
+
 - 使用图床服务（如 SM.MS、ImgURL）
 - 将图片放在项目的 `assets` 或 `images` 文件夹中
 - 注意图片版权和文件大小
@@ -447,40 +452,44 @@ flowchart TD
 
 <br/>
 
-**题目：实现一个函数，判断一个字符串是否为回文串。**
+# **Solution: Implement a function to determine whether a string is a palindrome.**
 
-> 回文串是指正着读和反着读都一样的字符串，例如 `level`、`noon`。
+> A palindrome is a string that reads the same forward and backward, for example: `level`, `noon`.
 
-**题解思路**：
+**Solution idea**：
 
-1. **去除空格和大小写影响**  
-    使用 `str.lower()` 和 `str.replace()` 处理输入。
+1. **Remove spaces and ignore case**  
+    Use `str.lower()` and `str.replace()` to preprocess the input.
 
-2. **双指针法**  
-    用两个指针分别从字符串两端向中间移动，比较字符是否相同。
+2. **Two-pointer method**  
+    Use two pointers starting from both ends of the string moving toward the center and compare characters.
 
-**代码实现**：
+**Code implementation**：
 
 ```python
 def is_palindrome(s):
      s = s.lower().replace(' ', '')
      return s == s[::-1]
+```
 
-# 测试用例
+# Test cases
+
+```python
 print(is_palindrome("Level"))      # True
 print(is_palindrome("Hello"))      # False
 print(is_palindrome("A man a plan a canal Panama"))  # True
 ```
 
-- [x] 处理大小写
-- [x] 去除空格
-- [x] 使用切片反转字符串
-- [ ] 处理标点符号（可扩展）
+Task list:
+- [x] Handle case sensitivity
+- [x] Remove spaces
+- [x] Use slicing to reverse the string
+- [ ] Handle punctuation (optional extension, not completed)
 
-**总结**：  
-*回文判断* 是字符串处理的常见题型，掌握文本预处理和切片技巧非常重要。  
-~~不要忘记考虑特殊情况，比如空字符串或只有一个字符。~~  
-__多练习几种实现方式，可以提升代码能力！__
+**Summary**：  
+*Palindrome checking* is a common string-processing problem. It's important to master text preprocessing and slicing techniques.  
+~~Don't forget to consider edge cases such as an empty string or a single-character string.~~  
+__Practicing multiple implementations will improve coding skills!__
 
 ---
 

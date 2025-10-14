@@ -1,5 +1,28 @@
 # Markdown 入门教程
 
+
+
+```markdown
+
+[toc]
+```
+
+
+
+
+
+[toc]
+
+
+
+
+
+
+
+
+
+
+
 ## 目录
 
 1. [什么是 Markdown](#什么是-markdown)
@@ -254,7 +277,7 @@ helloWorld();
 def hello_world():
     print("Hello, World!")
     
-hello_world()
+hello_world()å
 ```
 
 **支持的常见语言标识**：
@@ -307,15 +330,17 @@ hello_world()
 
 ```markdown
 [链接文本](https://example.com)
-
 [带标题的链接](https://example.com "鼠标悬停显示的标题")
-
 <https://example.com> （自动链接）
 ```
 
 **效果：**
 
 [链接文本](https://github.com/Gentle-Lijie)
+
+[带标题的链接](https://example.com "鼠标悬停显示的标题")
+
+<https://example.com>
 
 #### 图片
 
@@ -349,9 +374,10 @@ hello_world()
 
 **效果：**
 
-这是一段包含脚注的文本[^1]。
+这是一段包含脚注的文本[^1]，还有另一个脚注[^note]。
 
-[^1]: 这是脚注的内容。
+[^1]: 这是第一个脚注的内容。
+[^note]: 这是一个命名脚注。
 
 **适用场景**：
 - 学术论文
@@ -372,7 +398,7 @@ hello_world()
 这是一个行内公式 $E=mc^2$
 ```
 
-**效果：** $E=mc^2$
+**效果：** 这是一个行内公式 $E=mc^2$
 
 **块级公式**：
 
@@ -383,10 +409,25 @@ $$
 ```
 
 **效果：**
-
 $$
 x_{1,2} = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
 $$
+
+```markdown
+$$
+\LaTeX\mathrm{是一种很强大的排版工具，能够提供\color{red}{着色}等功能}\\
+\ce{Zn^2+  <=>[+ 2OH-][+ 2H+]  $\underset{\text{amphoteres Hydroxid}}{\ce{Zn(OH)2 v}}$  <=>[+ 2OH-][+ 2H+]  $\underset{\text{Hydroxozikat}}{\ce{[Zn(OH)4]^2-}}$} 
+$$
+```
+
+$$
+\LaTeX\mathrm{是一种很强大的排版工具，能够提供\color{red}{着色}等功能}\\
+\ce{Zn^2+  <=>[+ 2OH-][+ 2H+]  $\underset{\text{amphoteres Hydroxid}}{\ce{Zn(OH)2 v}}$  <=>[+ 2OH-][+ 2H+]  $\underset{\text{Hydroxozikat}}{\ce{[Zn(OH)4]^2-}}$} 
+$$
+
+
+
+
 
 ### 2. 流程图（Mermaid）
 
@@ -406,7 +447,7 @@ flowchart TD
 **效果：**
 
 ```mermaid
-flowchart TD
+graph TD
     A[开始] --> B{判断条件}
     B -->|是| C[执行操作1]
     B -->|否| D[执行操作2]

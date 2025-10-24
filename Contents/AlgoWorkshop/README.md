@@ -222,6 +222,32 @@ vector<int> add(vector<int> a, vector<int> b) { ... }
   - Kruskal / Prim：最小生成树
   - Topo Sort：有向无环图排序
 
+### 举例：Dijkstra 算法
+
+[CompPsyUnion/2526-wechat-blogs/issues/2](https://github.com/CompPsyUnion/2526-wechat-blogs/issues/2)
+
+```cpp
+vector<int> dijkstra(int start, const vector<vector<pair<int, int>>>& graph) {
+    int n = graph.size();
+    vector<int> dist(n, INT_MAX);
+    dist[start] = 0;
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>> pq;
+    pq.emplace(0, start);
+
+    while (!pq.empty()) {
+        auto [d, u] = pq.top(); pq.pop();
+        if (d > dist[u]) continue;
+        for (auto& [v, w] : graph[u]) {
+            if (dist[u] + w < dist[v]) {
+                dist[v] = dist[u] + w;
+                pq.emplace(dist[v], v);
+            }
+        }
+    }
+    return dist;
+}
+```
+
 **总结：**  
 图论是竞赛中的**核心模块**之一，解决各种“连接关系”类问题。  
 思维公式：

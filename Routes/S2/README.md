@@ -47,7 +47,7 @@ Welcome to the Little Byte Challenge Workshop for Season 2! This workshop is des
 
 ### Online Judge 的使用和测试
 
-请打开 [http://oj.hnrobert.space/](http://oj.hnrobert.space)，如果提示$502$，请确保你是用的是 HTTP 协议。
+请打开 [https://oj.hnrobert.space](https://oj.hnrobert.space)
 
 ### 评测机状态
 

@@ -2,6 +2,6 @@
 
 ## Session Structure
 
-### [How to Connect VSCode with Discord via installing a plugin to display a rich presence status in Discord profile](../../Contents/VSCode-Discord)
+### [Get to know GitHub, Again](../../Contents/GitWorkshop)
 
-### [Git Workshop](../../Contents/GitWorkshop)
+### [Show your coding status on Discord with a simple VSCode plugin](../../Contents/VSCode-Discord)

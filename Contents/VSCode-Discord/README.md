@@ -57,6 +57,7 @@ SteamCommunity is a platform for gamers to connect and share content. It also pr
    - On macOS or Linux, open a terminal, navigate to the extracted directory, and open the `运行.command` file using the `Terminal` app (which should be done so by default, so just double click and open would just be fine).
      - macOS has a security mechanism called Gatekeeper that may block applications from unidentified developers. If you encounter a warning when trying to run SteamCommunity, like this:
        ![macOS warning](./assets/images/steamcommunity-open-warning-macos.png)
+
        you can bypass this by following these steps:
        1. Open `System Preferences` and go to `Security & Privacy`.
        2. In the `General` tab, you should see a message about SteamCommunity being blocked. Click the `Open Anyway` button.

@@ -55,15 +55,19 @@ SteamCommunity is a platform for gamers to connect and share content. It also pr
    ![Download SteamCommunity](assets/images/download-steamcommunity.png)
 2. Extract the zip package to a local directory on your computer (to a location that is easy to remember, this is recommended). The default decompressor of your operating system should be fine.
 3. Run the Programme
+
    - On Windows, double-click the `Steamcommunity_302.exe` file to launch the application. If any security warnings appear, confirm that you want to run the application.
    - On macOS or Linux, open a terminal, navigate to the extracted directory, and open the `运行.command` file using the `Terminal` app (which should be done so by default, so just double click and open would just be fine).
+
      - macOS has a security mechanism called Gatekeeper that may block applications from unidentified developers. If you encounter a warning when trying to run SteamCommunity, like this:
        ![macOS warning](./assets/images/steamcommunity-open-warning-macos.png)
 
        you can bypass this by following these steps:
+
        1. Open `System Preferences` and go to `Security & Privacy`.
        2. In the `General` tab, you should see a message about SteamCommunity being blocked. Click the `Open Anyway` button.
        3. Confirm your choice in the dialog that appears.
+
 4. After launching SteamCommunity, you may see its main interface as shown below, now Click the `⚙️设置` button to open the settings panel.
    ![SteamCommunity Main Interface](./assets/images/steamcommunity-main-interface.png)
 5. Select the website/application you want to use the proxy for (in this case, just select `Discord 语音` would be fine, you may also notice a Option called `GitHub`, that can also be helpful for you ;).
@@ -94,10 +98,11 @@ Discord is widely used among developers and gamers for communication and collabo
 #### Experience Discord Presence Extension and GitHub Integration
 
 1. Make sure you have followed the steps above to set up Discord and SteamCommunity proxy service.
-2. Launch Discord on your computer and try join a [Discord Server (right click and copy link)](https://discord.com/invite/5dVbWhEbQc) through the add button on the left,  clicking the `Join Discord Server` button below, and paste the invite link you copied:
+2. Launch Discord on your computer and try join a [Discord Server (right click and copy link)](https://discord.com/invite/5dVbWhEbQc) through the add button on the left, clicking the `Join Discord Server` button below, and paste the invite link you copied:
    ![Discord Join Server](./assets/images/discord-join-server.png)
 
    You may also just visit the link above in your web browser, make sure you're using your account that has just been registered or your account that you've always been using, and let it redirect you to your Discord app to join the server.
+
 3. In the server, you can see the example of rich presence status (of me), and browse through the `#github` channel with a GitHub Bot installed and see how it has worked.
 4. Try star [this repository](https://github.com/CompPsyUnion/2526-weekly-session) on GitHub, and see how the GitHub Bot in Discord notify the server about your action.
    ![GitHub Star](./assets/images/github-star.png)
@@ -127,6 +132,12 @@ Discord is widely used among developers and gamers for communication and collabo
 4. Click on the "Install" button to install the Discord Presence extension.
 5. After installation, the Discord Presence extension should automatically connect to your Discord account, see the badge below:
    ![VSCode Discord Badge](./assets/images/vscode-discord-badge.png)
+
+   If it shows "**Reconnect to Discord**", just click on it to reconnect. If it still fails to connect, please see the checklist below and retry after confirming all items are met:
+
+   - The **Discord app** is running on your computer and you are logged in.
+   - The SteamCommunity proxy service is running (if applicable).
+
 6. Open a project or start coding in VSCode, and you should see your coding activity displayed as a rich presence status on your Discord profile.
    ![VSCode Discord Effect](./assets/images/vscode-discord-effect.png)
 7. You can customize the settings of the Discord Presence extension by going to the Extensions view, finding the Discord Presence extension, and clicking on the gear icon to access its settings.

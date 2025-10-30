@@ -1,4 +1,4 @@
-# Show your coding status on Discord with proxy, webhook and a simple VSCode plugin
+# Show your coding status on Discord via proxy, webhook and a simple VSCode plugin
 
 This workshop will guide you through the steps to connect Visual Studio Code (VSCode) with Discord using proxy, webhook and a VSCode plugin, allowing you to display your coding activity as a rich presence status on your Discord profile and catch up with the developer community.
 
@@ -79,7 +79,7 @@ SteamCommunity is a platform for gamers to connect and share content. It also pr
 
 ### Why Discord?
 
-Discord is widely used among developers and gamers for communication and collaboration. But why not other communication platforms like Slack or Microsoft Teams?
+Discord is widely used among developers and gamers for communication and collaboration. But why not other communication platforms like WeChat or Microsoft Teams?
 
 - **Developer Community**: Discord has a large and active developer community, which has led to the creation of various plugins and extensions that enhance its functionality, including the Discord Presence extension for VSCode. What's more, Discord has a open support for developers to create their own applications and integrations using the Discord API and interact with the Discord platform programmatically. Discord also embraces bots, which can automate tasks and provide additional features within servers.
 - **Ease of Use**: Discord is known for its user-friendly interface and ease of use, making it accessible to both beginners and experienced users.
@@ -95,7 +95,7 @@ Discord is widely used among developers and gamers for communication and collabo
 2. After registering, download and install the Discord application on your computer from [Discord's download page](https://discord.com/download).
 3. Launch the Discord application and log in using your newly created account credentials.
 
-#### Experience Discord Presence Extension and GitHub Integration
+## Experience Discord Presence Extension and GitHub Integration
 
 1. Make sure you have followed the steps above to set up Discord and SteamCommunity proxy service.
 2. Launch Discord on your computer and try join a [Discord Server (right click and copy link)](https://discord.com/invite/5dVbWhEbQc) through the add button on the left, clicking the `Join Discord Server` button below, and paste the invite link you copied:

@@ -103,24 +103,24 @@ Discord is widely used among developers and gamers for communication and collabo
 
 ## Steps to Connect VSCode with Discord
 
-### Discord Setup
+### Discord and Proxy Setup
 
 1. Make sure you have Discord installed on your computer and that you are logged into your account.
-2. Open Discord and go to User Settings by clicking on the gear icon located at the bottom left corner of the Discord window.
-3. In User Settings, navigate to the "Activity Status" tab on the left sidebar.
-4. Ensure that the "Display current activity as a status message" option is enabled. This allows Discord to show your current activity, including VSCode usage.
+2. Make sure the SteamCommunity proxy service is running if you are in a domestic network environment, as described in the [Usage of SteamCommunity as a Proxy Provider](#usage-of-steamcommunity-as-a-proxy-provider) section above.
 
 ### VSCode Setup
 
 1. Install Visual Studio Code (VSCode) on your computer if you haven't already.
 2. Open VSCode and navigate to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window or by pressing `Ctrl+Shift+X`.
-3. In the search bar, type "Discord Presence" to find the Discord Presence extension.
+3. In the search bar, type "Discord Presence" or use the plugin's ID `icrawl.discord-vscode` to find the Discord Presence extension.
+   ![VSCode Plugin Install](./assets/images/vscode-plugin-install.png)
 4. Click on the "Install" button to install the Discord Presence extension.
-5. After installation, you may need to restart VSCode to activate the extension.
-6. Once VSCode is restarted, the Discord Presence extension should automatically connect to your Discord account.
-7. Open a project or start coding in VSCode, and you should see your coding activity displayed as a rich presence status on your Discord profile.
-8. You can customize the settings of the Discord Presence extension by going to the Extensions view, finding the Discord Presence extension, and clicking on the gear icon to access its settings.
-9. In the settings, you can configure options such as showing the file name, programming language, and time spent coding.
-10. Enjoy sharing your coding status with your friends on Discord!
+5. After installation, the Discord Presence extension should automatically connect to your Discord account, see the badge below:
+   ![VSCode Discord Badge](./assets/images/vscode-discord-badge.png)
+6. Open a project or start coding in VSCode, and you should see your coding activity displayed as a rich presence status on your Discord profile.
+   ![VSCode Discord Effect](./assets/images/vscode-discord-effect.png)
+7. You can customize the settings of the Discord Presence extension by going to the Extensions view, finding the Discord Presence extension, and clicking on the gear icon to access its settings.
+8. In the settings, you can configure options such as showing the file name, programming language, and time spent coding.
+9. Enjoy sharing your coding status with your friends on Discord!
 
 For more detailed instructions and troubleshooting, refer to the [official documentation of the Discord Presence extension](https://marketplace.visualstudio.com/items?itemName=icrawl.discord-vscode).

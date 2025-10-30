@@ -1,6 +1,8 @@
 # Show your coding status on Discord with proxy, webhook and a simple VSCode plugin
 
-This workshop will guide you through the steps to connect Visual Studio Code (VSCode) with Discord using proxy, webhook and a VSCode plugin, allowing you to display your coding activity as a rich presence status on your Discord profile.
+This workshop will guide you through the steps to connect Visual Studio Code (VSCode) with Discord using proxy, webhook and a VSCode plugin, allowing you to display your coding activity as a rich presence status on your Discord profile and catch up with the developer community.
+
+![Main Demo](./assets/images/discord-bot-example.png)
 
 ## Required Preparation
 

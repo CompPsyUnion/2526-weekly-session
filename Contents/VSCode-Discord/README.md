@@ -1,10 +1,10 @@
-# Show your coding status on Discord with a simple VSCode plugin
+# Show your coding status on Discord with proxy, webhook and a simple VSCode plugin
 
-This workshop will guide you through the steps to connect Visual Studio Code (VSCode) with Discord using a plugin, allowing you to display your coding activity as a rich presence status on your Discord profile.
+This workshop will guide you through the steps to connect Visual Studio Code (VSCode) with Discord using proxy, webhook and a VSCode plugin, allowing you to display your coding activity as a rich presence status on your Discord profile.
 
 ## Required Preparation
 
-[Click to Download VSCode installer](https://code.visualstudio.com) [Click to Download Discord installer and SteamCommunity](http://ug.link/hnrobert-nas/filemgr/share-download/?id=b80a41b4bd604b80945dcde6bde1d9c3)
+[Click to Download **VSCode installer**](https://code.visualstudio.com) and [Click to Download **Discord installer** and **SteamCommunity**](http://ug.link/hnrobert-nas/filemgr/share-download/?id=b80a41b4bd604b80945dcde6bde1d9c3)
 
 - Just download the installers/packages that match your own computer's platform/architecture.
 - **If you've already known how to connect to Discord under domestic network environment, you may skip the installation of SteamCommunity**, otherwise please have it prepared, and we will introduce more about its usage during the session
@@ -97,6 +97,12 @@ Discord is widely used among developers and gamers for communication and collabo
 
    You may also just visit the link above in your web browser, make sure you're using your account that has just been registered or your account that you've always been using, and let it redirect you to your Discord app to join the server.
 3. In the server, you can see the example of rich presence status (of me), and browse through the `#github` channel with a GitHub Bot installed and see how it has worked.
+4. Try star [this repository](https://github.com/CompPsyUnion/2526-weekly-session) on GitHub, and see how the GitHub Bot in Discord notify the server about your action.
+   ![GitHub Star](./assets/images/github-star.png)
+
+   **Effect:**
+
+   ![Discord GitHub Bot Effect](./assets/images/discord-github-bot-effect.png)
 
 > Webhook is a way for applications to communicate with each other in real-time. In the context of Discord and GitHub, a Webhook Bot can be set up to send notifications to a Discord channel whenever certain events occur on a GitHub repository, such as new commits, pull requests, or issues.  
 > Webhook is like a promise that one application makes to another application, saying "Hey, when this thing happens, I'll let you know by sending you a message." In this case, GitHub is promising to notify Discord whenever something important happens in the repository.

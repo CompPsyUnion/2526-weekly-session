@@ -20,6 +20,7 @@
         "isort",
         "javac",
         "Kief",
+        "marp",
         "nullptr",
         "Pylance",
         "Steamcommunity",
@@ -30,6 +31,8 @@
         "yzhang"
     ],
     "markdownlint.config": {
+        "no-emphasis-as-heading": false,
+        "no-inline-html": false,
         "no-bare-urls": false,
         "first-line-h1": false
     }

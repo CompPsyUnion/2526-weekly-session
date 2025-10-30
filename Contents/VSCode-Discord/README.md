@@ -108,6 +108,8 @@ Discord is widely used among developers and gamers for communication and collabo
 
 > Webhook is a way for applications to communicate with each other in real-time. In the context of Discord and GitHub, a Webhook Bot can be set up to send notifications to a Discord channel whenever certain events occur on a GitHub repository, such as new commits, pull requests, or issues.  
 > Webhook is like a promise that one application makes to another application, saying "Hey, when this thing happens, I'll let you know by sending you a message." In this case, GitHub is promising to notify Discord whenever something important happens in the repository.
+>
+> We may introduce more about how to set up a Discord Webhook Bot for GitHub, even some further usage of webhook technology **in our future sessions**.
 
 ## Steps to Connect VSCode with Discord
 

@@ -22,6 +22,7 @@
         "Kief",
         "marp",
         "nullptr",
+        "prerender",
         "Pylance",
         "Steamcommunity",
         "toolsai",
@@ -35,5 +36,10 @@
         "no-inline-html": false,
         "no-bare-urls": false,
         "first-line-h1": false
-    }
+    },
+    "markdown.marp.exportType": "pdf",
+    "markdown.marp.html": "all",
+    "markdown.marp.pdf.outlines": "both",
+    "markdown.marp.pptx.editable": "smart",
+    "markdown.marp.mathTypesetting": "katex"
 }

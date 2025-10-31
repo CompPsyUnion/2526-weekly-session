@@ -2,10 +2,31 @@
 marp: true
 theme: default
 paginate: true
+html: true
+mermaid: true
 header: 'VSCode & Discord Integration Workshop'
 footer: '@CompPsyUnion · Weekly Session'
 backgroundColor: '#f6f7fb'
 ---
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+mermaid.initialize({
+  startOnLoad: false,
+  theme: "dark", // ← 在这里换主题，可选：default / dark / neutral / forest / base
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("pre.mermaid").forEach((el) => {
+    const code = el.textContent.trim();
+    const container = document.createElement("div");
+    container.classList.add("mermaid");
+    container.textContent = code;
+    el.replaceWith(container);
+  });
+  mermaid.init();
+});
+</script>
 
 <style>
 .columns {

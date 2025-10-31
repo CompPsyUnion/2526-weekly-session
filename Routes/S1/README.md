@@ -1,6 +1,6 @@
 # Session 1 README
 
-## Workshop Structure
+## Session Structure
 
 ### [VSCode](../../Contents/VSCode)
 

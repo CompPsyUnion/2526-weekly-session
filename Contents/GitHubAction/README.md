@@ -38,7 +38,7 @@ From now on, you can move to our [tutorial repository](https://github.com/CompPs
 
 ## Q&A and Best Practices
 
-- Keep CI jobs small and focused (test, lint, package, publish)
+- Keep each CI job small and focused (test, lint, package, publish)
 - Cache dependency installs where sensible to speed up workflows
 - Use `actions/cache` for pip cache (pip cache is default for ephemeral runners, but caching wheels and pip cache can help)
 - Use workflow_dispatch for manual releases
@@ -49,15 +49,13 @@ From now on, you can move to our [tutorial repository](https://github.com/CompPs
 
 - `actions/checkout` — checkout the repository
 - `actions/setup-python` — set up Python
+- `actions/setup-node` — set up Node.js
+- `actions/setup-go` — set up Go
+- `actions/setup-dotnet` — set up .NET
 - `actions/upload-artifact` — upload artifacts
 - `actions/cache` — cache dependencies
 - `pytest` and `autopep8` for testing and automatic formatting
 
----
+## Useful Links
 
-## Appendix: Example Files
-
-See `Contents/GitHubAction/examples/python-template` for a minimal example you can open and customize.
-The packaging workflow solution is available at `Contents/GitHubAction/examples/python-template/solutions/package.yml` if you'd like a reference implementation or to copy it into your repo.
-
-If you want me to create the sample repo files and add workflows inside this workspace for demos and tests, I can do that next. Let me know and I'll implement the example template and package workflow for you.
+- [GitHub Actions Documentation](https://docs.github.com/en/actions)

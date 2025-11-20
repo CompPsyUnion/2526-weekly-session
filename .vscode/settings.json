@@ -32,6 +32,7 @@
         "pyinstaller",
         "Pylance",
         "pytest",
+        "PYTHONPATH",
         "SJTU",
         "softprops",
         "Steamcommunity",

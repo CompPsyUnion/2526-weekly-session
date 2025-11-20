@@ -27,6 +27,8 @@ GitHub Actions is a platform that lets you automate your development workflow. K
 
 ## Core Concepts
 
+- CI: Continuous Integration automates testing and validation of code changes.
+- CD: Continuous Deployment automates releasing code to production.
 - Runners: virtual machines provided by GitHub or self-hosted runners where job steps run.
 - Events: trigger workflows on `push`, `pull_request`, `release`, `schedule`, or manual `workflow_dispatch`.
 - Matrix strategy: run jobs across multiple OSes and Python versions.

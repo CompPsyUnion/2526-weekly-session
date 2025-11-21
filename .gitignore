@@ -3,3 +3,7 @@
 
 # Ignore .DS_Store in any subdirectory as well
 **/.DS_Store
+
+.venv
+.pytest_cache
+__pycache__

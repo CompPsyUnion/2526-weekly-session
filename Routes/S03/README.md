@@ -1,4 +1,4 @@
-# Session 2 README
+# Session 3 README
 
 ## Session Structure
 

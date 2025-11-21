@@ -25,6 +25,7 @@ backgroundColor: '#f6f7fb'
 - Demo: Read a simple workflow
 - Hands-On Practice
 - Best Practices & Links
+- Q&A
 
 ---
 
@@ -50,17 +51,30 @@ backgroundColor: '#f6f7fb'
 
 ## Workflows
 
-```text
-.github/workflows/*.yml
-```
+- Automated processes defined by config files under this folder in your repo:
 
-- Automated processes defined by YAML
+  ```text
+  .github/workflows/
+  ```
+
+- Usually we define one workflow in one file, e.g., `put-an-elephant-in-a-fridge.yml`
+- Each **workflow** is served as an independent automation
+- **Jobs** under one **workflow** are triggered by the same **events**
 
 ---
 
 ## Events
 
-- Trigger workflows: `push`, `pull_request`, `release`, `schedule`, `workflow_dispatch`
+- When to run workflows. like:
+
+  > ```yaml
+  > on:
+  >   when-elephant-is-not-in-fridge:
+  >   # joke, this does not exist in real GitHub Actions
+  > ```
+
+- Trigger workflows in GitHub:
+  - `push`, `pull_request`, `release`, `schedule`, `workflow_dispatch`
 
 ---
 
@@ -70,34 +84,52 @@ backgroundColor: '#f6f7fb'
 
 ```yaml
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    # steps, ...
+  bring-elephant-indoor:
+    runs-on: zoo
+    # ...
+
+  prepare-fridge:
+    runs-on: indoor
+    # ...
+
+  send-the-elephant-into-the-fridge:
+    runs-on: indoor
+    # ...
 ```
-
----
-
-## Steps
-
-```yaml
-steps:
-  - name: Checkout
-    uses: actions/checkout@v4
-  - name: Run tests
-    run: pytest
-```
-
-- Steps are `uses` or `run` commands
 
 ---
 
 ## Runners
 
-```yaml
-runs-on: ubuntu-latest
-```
+- Where do jobs run
 
-- Virtual environments for jobs
+  ```yaml
+  runs-on: campus
+  ```
+
+- For GitHub Action, this is virtual environments for jobs, also defined in this way:
+
+  ```yaml
+  runs-on: windows-latest
+  ```
+
+---
+
+## Steps
+
+- Steps are `uses` or `run` commands, executed sequentially inside a job
+
+```yaml
+steps:
+  - name: Open the fridge
+    uses: pre-defined/open-fridge-action@v1
+
+  - name: put the elephant in the fridge
+    run: mv elephant.zip /fridge
+
+  - name: Close the fridge
+    uses: pre-defined/close-fridge-action@v1
+```
 
 ---
 
@@ -106,11 +138,11 @@ runs-on: ubuntu-latest
 ```yaml
 strategy:
   matrix:
-    os: [ubuntu-latest, macos-latest, windows-latest]
-    python: [3.8, 3.11]
+    places: [room01, room02, room03]
+    fridges: [Xiaomi, SIEMENS]
 ```
 
-- Run jobs across OS/Python combos (2x3=6 jobs here)
+- Run jobs across rooms/brands of fridges combos (2x3=6 jobs here)
 
 ---
 
@@ -401,6 +433,17 @@ jobs:
 
 - Installs Python without manual commands
 
+> If you want to install python manually, you may use the following step:
+>
+> ```yaml
+> - name: Set up Python Manually
+>   run: |
+>     sudo apt-get update
+>     sudo apt-get install -y python3.11 python3.11-venv python3.11-dev
+> ```
+>
+> That's why we use `actions/setup-python`, simple and stable.
+
 ---
 
 ## Step: Install dependencies
@@ -439,6 +482,7 @@ jobs:
 ```
 
 - Executes test suite and reports failures
+- `PYTHONPATH` environment variable ensures `app/` is importable
 
 ---
 
@@ -485,7 +529,9 @@ But to upload your build artifacts every time to GitHub from local would be tedi
 
 - Jobs show logs and status in Actions tab
 
-![running](./assets/images/running.png)
+<p align="center">
+    <img src="./assets/images/running.png" alt="running" width="750"/>
+</p>
 
 ---
 
@@ -509,14 +555,49 @@ But to upload your build artifacts every time to GitHub from local would be tedi
 
 ## More job features
 
-```yaml
-strategy:
-  matrix:
-    os: [ubuntu-latest, macos-latest, windows-latest]
-needs: [build]
-```
-
 - `strategy` and `needs` help with matrices and dependencies
+
+  ```yaml
+  strategy:
+    matrix:
+      os: [ubuntu-latest, macos-latest, windows-latest]
+  needs: [build]
+  ```
+
+- Define environment variables for steps
+
+  ```yaml
+  env:
+    PACKAGE_NAME: hello
+  ```
+
+- Use `if:` to conditionally run steps or jobs
+
+  ```yaml
+  if: github.event_name == 'push'
+  ```
+
+---
+
+- Use `outputs` to pass data between jobs
+
+  ```yaml
+  outputs:
+    package-path: ${{ steps.package.outputs.path }}
+  ```
+
+- Use `secrets` to store sensitive data
+
+  ```yaml
+  secrets:
+    API_KEY: ${{ secrets.API_KEY }}
+  ```
+
+- Use `timeout-minutes` to limit job duration
+
+  ```yaml
+  timeout-minutes: 10
+  ```
 
 ---
 
@@ -557,17 +638,21 @@ The repository includes a workflow that automatically builds packages for multip
 
 ## Create Release — Tag & Title
 
-![type-tag](./assets/images/type-tag.png)
-
 - Add tag (e.g., `v1.0.0`) and title
+
+<p align="center">
+    <img src="./assets/images/type-tag.png" alt="type-tag" width="700"/>
+</p>
 
 ---
 
 ## Publish Release
 
-- Click to publish; workflows can auto-run on release
+- Use the tag and add a title & description, click to publish
 
-![publish-release](./assets/images/publish-release.png)
+<p align="center">
+    <img src="./assets/images/publish-release.png" alt="publish-release" width="800"/>
+</p>
 
 ---
 
@@ -616,17 +701,17 @@ The repository includes a workflow that automatically builds packages for multip
 
 ---
 
+## Useful Link
+
+- GitHub Actions docs: https://docs.github.com/en/actions
+
+---
+
 ## Q&A ;)
 
 Any questions so far?
 
 Ask what you want to do with GitHub Actions!
-
----
-
-## Useful Links
-
-- GitHub Actions docs: https://docs.github.com/en/actions
 
 ---
 

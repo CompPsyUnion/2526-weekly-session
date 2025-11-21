@@ -1,5 +1,7 @@
 # Github Action Tutorial
 
+[Repository Link](https://github.com/CompPsyUnion/github-action-tutorial)
+
 ## Quick Start
 
 In our GitHub Repo Website, click "Use this template" and choose "Create a new Repository" option to create a copy of this repo of your own. Do as the image below:

@@ -7,7 +7,16 @@
 
 ---
 
-This weekly session will introduce Docker, an essential tool for development. You will learn how to build, distribute, and run containerized applications using Docker, thereby preventing application runtime issues caused by inconsistent environments.
+## Environment Problems in Development
+
+As a developer, have you ever encountered the following problems:
+
+- **Complex environment configuration**: It takes a lot of time to set up a development environment on a new machine
+- **Dependency conflicts**: Different projects may require different versions of dependencies, which are difficult to coexist on the same machine
+- **Deployment issues**: Applications that run normally in the development environment have various problems in the production environment
+- **Collaboration difficulties**: Inconsistent environments between team members lead to differences in code behavior
+
+These problems seriously affect development efficiency and project stability, and Docker is a tool created to solve these problems.
 
 ![Docker Display Image](./image/image.png)
 

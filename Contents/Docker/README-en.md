@@ -4,7 +4,6 @@
 
 [中文版本 (Chinese Version)](README.md)
 
-
 ---
 
 ## Environment Problems in Development
@@ -22,21 +21,21 @@ These problems seriously affect development efficiency and project stability, an
 
 ## In this weekly session, you will learn
 
-- ### What is Docker
+- **What is Docker**
 
-- ### Core features of Docker
+- **Core features of Docker**
 
-- ### Docker's historical background
+- **Docker's historical background**
 
-- ### Advantages of Docker
+- **Advantages of Docker**
 
-- ### Docker's architecture
+- **Docker's architecture**
 
-- ### Docker's workflow
+- **Docker's workflow**
 
-- ### Basic Docker operations
+- **Basic Docker operations**
 
-- ### Docker network operations
+- **Docker network operations**
 
 ---
 
@@ -402,7 +401,7 @@ There are two ways to stop a container:
 docker stop container_name
 ```
 
-2. Force stop:
+1. Force stop:
 
 ```bash
 docker kill container_name

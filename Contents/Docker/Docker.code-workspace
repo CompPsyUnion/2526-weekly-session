@@ -12,6 +12,9 @@
 		"markdown.marp.html": "all",
 		"markdown.marp.pdf.outlines": "both",
 		"markdown.marp.pptx.editable": "smart",
-		"markdown.marp.mathTypesetting": "katex"
+		"markdown.marp.mathTypesetting": "katex",
+		"cSpell.words": [
+			"PYTHONUNBUFFERED"
+		]
 	}
 }

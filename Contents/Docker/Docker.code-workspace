@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../docker-tutorial"
+		}
+	],
+	"settings": {
+		"markdown.marp.exportType": "pdf",
+		"markdown.marp.html": "all",
+		"markdown.marp.pdf.outlines": "both",
+		"markdown.marp.pptx.editable": "smart",
+		"markdown.marp.mathTypesetting": "katex"
+	}
+}

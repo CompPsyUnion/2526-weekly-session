@@ -86,10 +86,10 @@ _Managing Multi-Container Applications with Declarative Configuration_
 ```bash
 docker build
 docker run
-docker exec
-docker network
-docker volume
+docker ...
 ```
+
+---
 
 **But when your application needs:**
 
@@ -112,7 +112,7 @@ docker run -d --name mysql \
 
 docker run -d --name web \
   -p 8080:8080 \
-  --link mysql:mysql \
+  --link mysql:mysql \  # Link to mysql container to access database
   my-web-app
 ```
 

@@ -20,15 +20,21 @@
 
 ### 那有没有什么办法来`解决这些问题`呢？
 
+---
+
 对此，我只能说：
 
 ### 有的兄弟，有的
 
 这个时候，就需要我们大名鼎鼎的``Docker``出马了（狗头）
 
+---
+
 ![Docker展示图](./image/image.png)
 
 ## 在本次周常中，你将学习到
+
+---
 
 - **Docker是什么**
 
@@ -127,6 +133,8 @@ git clone https://github.com/CompPsyUnion/docker-tutorial.git
 
 ![use_this_template](./image/guide01.png)
 
+---
+
 进入如下界面：
 
 ![codespaces界面](./image/guide02.png)
@@ -138,6 +146,8 @@ git clone https://github.com/CompPsyUnion/docker-tutorial.git
 下载完之后，你可能会想问什么是Docker，为什么它可以成为环境相关问题的重要救星呢？
 
 那接下来，我就来简单介绍一下Docker的相关背景，它到底是什么。
+
+---
 
 ## Docker相关背景知识
 
@@ -262,6 +272,8 @@ Docker的工作流主要如下所示：
 镜像（只读）由多层（分别在多个文件中记录）组成，每层分别记录不同的容器信息
 
 > 你问为啥只读？当然是为了保证镜像不会被修改啦，否则就会导致镜像被污染，从而影响到其他依赖这个镜像的容器的运行。
+
+---
 
 例如：
 

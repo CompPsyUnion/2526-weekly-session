@@ -8,14 +8,23 @@
 
 ## Environment Problems in Development
 
-As a developer, have you ever encountered the following problems:
+As a developer, imagine the following scenario:
 
-- **Complex environment configuration**: It takes a lot of time to set up a development environment on a new machine
-- **Dependency conflicts**: Different projects may require different versions of dependencies, which are difficult to coexist on the same machine
-- **Deployment issues**: Applications that run normally in the development environment have various problems in the production environment
-- **Collaboration difficulties**: Inconsistent environments between team members lead to differences in code behavior
+One day, you suddenly have an idea at home to write a small game with a `mixed multilingual environment` on `your own computer` to show your friends and demonstrate the `superiority` of being a programmer.
 
-These problems seriously affect development efficiency and project stability, and Docker is a tool created to solve these problems.
+But when you take this small game to your friend's house with a USB drive, you find that their computer is actually `Windows 11`, while your own computer is `macOS`.
+
+Unfortunately, you also `didn't write a requirements.txt file in your folder`, so it's hard to figure out what dependencies this game needs.
+
+Suddenly, your attempt to show off turns into an embarrassing situation (annoyed).
+
+### Is there any way to `solve these problems`?
+
+To this, I can only say:
+
+### Yes, there is, my friend
+
+This is where our famous `Docker` comes into play (dog head).
 
 ![Docker Display Image](./image/image.png)
 
@@ -41,9 +50,17 @@ These problems seriously affect development efficiency and project stability, an
 
 ## Preparation
 
-It's best if you can install Docker on your local machine for this weekly session.
+It's best if you can install Docker on your local machine for this weekly session (great joy).
 
-If not, you can also learn through GitHub Codespaces during this session.
+### What if you don't have it, do you have to give up learning? (sad)
+
+Don't worry, we've already prepared for this.
+
+### In this weekly session, you can learn through GitHub Codespaces in our repository
+
+If you'd like, you can first install Docker Desktop according to the tutorial below.
+
+---
 
 ### Install Docker Desktop
 
@@ -84,7 +101,19 @@ After installation, you can run the docker command in the command line to verify
 docker --version
 ```
 
-If version information appears, the installation was successful
+If version information appears, the installation was successful (applause)
+
+After downloading, please remember to restart your computer, then go directly to the following repository:
+
+<https://github.com/CompPsyUnion/docker-tutorial>
+
+Clone this repository to your local machine
+
+```bash
+git clone https://github.com/CompPsyUnion/docker-tutorial.git
+```
+
+Then you can prepare to start learning Docker.
 
 ---
 
@@ -106,6 +135,10 @@ Then you can learn in Codespaces
 
 ---
 
+After downloading, you might be wondering what Docker is and why it can be an important savior for environment-related problems.
+
+Next, I'll briefly introduce the relevant background of Docker and what it actually is.
+
 ## Docker Background Knowledge
 
 Simply put, Docker is a lightweight containerization technology and platform used to solve common environment problems in programming.
@@ -115,6 +148,10 @@ It packages applications, dependencies, and user-space environments together in 
 Subsequently, if you need to run this application on another computer, you just need to run this container without worrying about the application's environment issues.
 
 Today, we will learn how to use Docker to build a container and how to use this container to run our applications.
+
+---
+
+Now that we've covered the basic concept, let's talk about Docker's historical background.
 
 ---
 
@@ -130,7 +167,17 @@ To solve this problem, Hykes began thinking about how to package applications an
 
 Furthermore, Hykes decided to create a new tool for packaging applications and their environments.
 
+And the name of a dock worker is exactly Docker. Hykes thought this name was very appropriate for the tool's functionality, so he named the tool Docker.
+
 Thus, Docker was born.
+
+---
+
+At this point, someone might say:
+
+> Why can't virtual machines solve this problem? Isn't it also a famous containerization technology?
+
+Next, I'll briefly introduce the differences between Docker and virtual machines, as well as Docker's advantages.
 
 ---
 
@@ -153,7 +200,9 @@ Compared to virtual machines:
 | Isolation | Process-level isolation | Complete isolation |
 | Scalability | High | Limited |
 
-These advantages have led to widespread adoption and recognition of Docker among developers.
+These advantages have led to widespread adoption and recognition of Docker among developers. It leads the pack in environment handling.
+
+![meme](./image/guide03.gif)
 
 ---
 
@@ -171,7 +220,9 @@ Docker can be divided into the following components, which together form Docker'
 Docker adopts a client-server architecture, where the Client communicates with the Daemon through a REST API, allowing Docker to be operated locally or remotely.
 
 ---
-Now that we've covered the architecture, let's detail Docker's workflow.
+Now that we've covered the architecture, let's get to the `most most most most most important` part: Docker's workflow.
+
+---
 
 ## Docker's Workflow
 
@@ -182,22 +233,34 @@ Docker's workflow is primarily as follows:
 3. **Run a container**: Users can pull images from the Registry and run containers using the `docker run` command.
 4. **Manage containers**: Users can manage running containers using commands like `docker ps`, `docker stop`, `docker restart`, etc.
 
-In this weekly session, considering most people's situations, we will only consider the `pull` operation for Docker image distribution. Interested friends can check the Docker official documentation to further learn how to fully utilize the powerful tool of Docker Registry.
+In this weekly session, considering most people's situations (i.e., using Codespaces), we will only consider the `pull` operation for Docker image distribution. Interested friends can check the Docker official documentation to further learn how to fully utilize the powerful tool of Docker Registry.
 
-At this point, I think it's time to introduce the concepts of containers and images.
+---
+
+At this point, someone might ask:
+
+> You haven't explained what containers and images are yet.
+
+Don't worry, I'll explain these two concepts now to help you understand later.
+
+**~~Damn, can't be lazy anymore (sad)~~**
 
 ### What is a Container
 
 A container is simply a set of processes, but unlike regular processes, these processes have some restrictions:
 
-- Cannot see files outside the image by default
+- Cannot see files outside the image (unless you use volumes, which we'll mention later)
 - Relies on the image's system files to run, using the Linux kernel to execute processes (regardless of the current device's system type)
 
 It is precisely because of these restrictions that containers can run on any device without worrying about environment issues.
 
+---
+
 ### What is an Image
 
-An image consists of multiple layers (recorded in multiple files), each recording different container information
+An image (read-only) consists of multiple layers (recorded in multiple files), each recording different container information
+
+> Why read-only? Of course, to ensure the image doesn't get modified, otherwise the image would be polluted, which would affect the operation of other containers that depend on this image.
 
 For example:
 
@@ -209,291 +272,33 @@ Images can be ported to a new device through compression and decompression
 
 A container is then created on the new device to run the project's content
 
-It's okay if these concepts are not immediately understood; they don't significantly affect the use of Docker.
+#### It's okay if these concepts are not immediately understood; they don't significantly affect the use of Docker
+
+~~But I think you all understand now (seriously)~~
 
 ---
 
-Now for some specific operations
-
----
+Next are some specific operations
 
 We will learn Docker's basic operations through a specific example.
 
+---
+
 ### Example Application: Flask Application
 
-First, we create a simple Flask application to demonstrate the use of Docker. Create a file named `app.py` with the following content:
+Next, please go to the repository to complete the relevant practical exercises:
 
-```python
-from flask import Flask
+### <https://github.com/CompPsyUnion/docker-tutorial>
 
-app = Flask(__name__)
+~~Actually, this is the one I asked you to prepare earlier.~~
 
-@app.route('/')
-def hello():
-    return "Hello, Docker!"
+If you're practicing with Codespaces, you don't need to do anything else because if you followed my previous tutorial `(you did, right?)`, you're already in the correct location.
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
-```
+After completing the exercises, you now have basic Docker operation skills and can perform packaging operations according to your needs.
 
-### Dockerfile
-
-To let Docker know how to build an image, we need to write a Dockerfile in the project (no extension)
-
-```dockerfile
-#1. basic information
-FROM python:3.10-slim
-
-#2. set workspace
-WORKDIR /app
-
-#3. install dependencies
-RUN pip install flask
-
-#4. copy app.py to /app dir in the container
-COPY app.py /app/
-
-#5. set environment variables
-ENV PYTHONUNBUFFERED=1  
-#let python print log immediately
-
-#6. define the command to run in default when container starts
-CMD ["python", "app.py"]
-
-```
-
-Regarding the above code:
-
-- `FROM`: Specifies the basic environment required for the project (such as Python version or C++ version)
-
-- `WORKDIR`: Specifies the root directory of the project's workspace in the container
-
-- `RUN`: Executes commands, here used to install Flask dependencies
-
-- `COPY`: Copies files from the current folder (same level as Dockerfile) to the specified location in the container
-
-- `ENV`: Adds environment variables
-
-- `CMD`: Defines the default command to run when the container starts
-
-With this Dockerfile, Docker knows what the corresponding image should look like.
-
-### Basic Image Operations
-
-#### Create
-
-You can create an image by running the following command:
-
-```bash
-docker build -t my-flask-app:v1 .
-```
-
-Where:
-
-- `-t` specifies the name of the image, generally in the format: `name:version`
-
-#### View
-
-To see how many images currently exist, you can run the following command:
-
-```bash
-docker images
-```
-
-#### Package
-
-Package the image as a tar file (for cross-device physical transfer):
-
-```bash
-docker save -o my-flask-app-v1.tar my-flask-app:v1
-```
-
-#### Import tar Package
-
-```bash
-docker load -i my-flask-app-v1.tar
-```
-
-#### Delete
-
-```bash
-docker rmi -f my-flask-app:v1
-```
-
-Where `-f` means forced deletion, which is not needed under normal circumstances
-
-Another way to clean up unused images:
-
-```bash
-docker image prune -a # -a: Clean up all unused images
-```
-
-You can package it into a tar file using the above command
-
-Facilitates transfer between devices.
-
-After the file is transferred to another device (must have Docker), use the command to decompress the tar file, and the image will exist on the new device
+In your future coding career, please enjoy the journey of being fearless of environment issues.
 
 ---
-
-### Basic Container Operations
-
-Commands related to containers are as follows:
-
-#### Create Container
-
-```bash
-docker run -d --name my-flask-container -p 8080:5000 my-flask-app:v1
-```
-
-Regarding the above command, there are several points to explain:
-
-- `-d`: Run in the background, do not display the simulated terminal in real-time
-
-- `--name`: Custom container name (you can write whatever you want)
-
-- `-p`: Port mapping (not needed if the packaged project does not involve network content like flask)
-
-- `-v`: Volume (just kidding, not yet, will talk about it later (dog head))
-
-#### View Container Status
-
-```bash
-docker ps # View running containers
-
-docker ps -a # View all containers
-```
-
-#### Start Container
-
-```bash
-docker start container_name
-```
-
-After start, add your own defined container name
-
-#### Run Internal Programs
-
-```bash
-# Enter the container's internal interactive terminal
-docker exec -it container_name /bin/bash
-
-# Execute a single command inside the container
-docker exec container_name ls -la
-```
-
-#### View Container Logs
-
-```bash
-docker logs container_name
-
-# View logs in real-time
-docker logs -f container_name
-```
-
-#### Stop Container
-
-There are two ways to stop a container:
-
-1. Graceful stop (recommended):
-
-```bash
-docker stop container_name
-```
-
-1. Force stop:
-
-```bash
-docker kill container_name
-```
-
-#### Restart Container
-
-```bash
-docker restart container_name
-```
-
-#### Delete Container
-
-Like images, there are two ways to delete containers:
-
-```bash
-docker rm -f my-flask-container # Force delete specified container
-
-docker container prune # Clean up all stopped containers
-```
-
-Where `-f` means forced deletion. If you want a gentler way, just remove `-f`.
-
-#### Volume Operations
-
-Volumes are mechanisms in Docker for persisting data, which can share data between containers or between the host and containers.
-
-```bash
-# Create volume
-docker volume create my-volume
-
-# View volumes
-docker volume ls
-
-# View volume details
-docker volume inspect my-volume
-
-# Mount volume when running container
-docker run -d --name my-container -v my-volume:/app/data my-image
-
-# Mount host directory to container
-docker run -d --name my-container -v /host/path:/container/path my-image
-
-# Delete volume
-docker volume rm my-volume
-
-# Clean up unused volumes
-docker volume prune
-```
-
----
-
-### Clean Up Images
-
-If you need to delete an image, please first delete the containers corresponding to this image, then delete the image
-
----
-
-## Docker Network
-
-Docker provides multiple network modes for communication between containers:
-
-- **bridge mode**: Default network mode, containers communicate with the host through a virtual network bridge
-- **host mode**: Containers directly use the host network, best performance but poor isolation
-- **none mode**: Containers have no network connection
-- **overlay mode**: Used for multi-host Docker clusters
-
-```bash
-# Create network
-docker network create my-network
-
-# View networks
-docker network ls
-
-# Run container with specified network
-docker run -d --name my-container --network my-network my-image
-
-# Connect container to network
-docker network connect my-network my-container
-
-# Disconnect container from network
-docker network disconnect my-network my-container
-
-# Delete network
-docker network rm my-network
-```
-
----
-
-The above are the basic operations of Docker, which you can adjust according to your needs.
-
-Now that you have learned the basic operations of Docker, please enjoy the journey of being fearless of environment issues in your future coding career.
 
 Here are some additional resources you can refer to in your future learning:
 

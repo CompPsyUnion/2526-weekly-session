@@ -86,10 +86,10 @@ _Managing Multi-Container Applications with Declarative Configuration_
 ```bash
 docker build
 docker run
-docker exec
-docker network
-docker volume
+docker ...
 ```
+
+---
 
 **But when your application needs:**
 
@@ -112,7 +112,7 @@ docker run -d --name mysql \
 
 docker run -d --name web \
   -p 8080:8080 \
-  --link mysql:mysql \
+  --link mysql:mysql \  # Link to mysql container to access database
   my-web-app
 ```
 
@@ -181,11 +181,33 @@ Still, you have no control over startup order, **ways to ensure database is read
 
 ---
 
+<div class="columns">
+  <div class="column">
+    <h2>Even worse, </h2>
+    <h2>A distributed application?</h2>
+    <ul>
+      <li>8 web service executables</li>
+      <li>1 database</li>
+      <li>1 cache</li>
+      <li>2 proxy services</li>
+      <li>1 mail service</li>
+      <li>...</li>
+    </ul>
+  </div>
+  <div class="column">
+    <img src="image/README_Marp/distributed-example.png" alt="Distributed Example" style="max-height: 620px;">
+  </div>
+</div>
+
+---
+
 ## Solution 2
 
-1. **Write a YAML file to describe "the entire application system"**
-2. **Start with a python program to parse the config file into docker commands**
-3. Run the program with params to specify your actions upon your application system (start/stop/restart/pull)
+1. Write **a YAML config** file to describe **"the entire application system"**
+2. Start with **a python program** to **parse the config** file into docker commands
+3. **Run the program** with params to specify your actions upon your application system **(start/stop/restart/pull/...)**
+
+---
 
 **Core Concepts:**
 
@@ -239,7 +261,11 @@ docker-compose up -d
 >
 > - The actual implementation of Docker Compose is more complex and robust, with many features and edge cases handled
 > - Docker Compose v2 is a complete rewrite in Go, with better performance and integration with Docker CLI
->
+
+---
+
+## `docker-compose ...` / `docker compose ...`
+
 > ```bash
 > # docker compose v1
 > docker-compose up -d
@@ -349,7 +375,7 @@ docker-compose.prod.yml    # Production override
 **Production startup:**
 
 ```bash
-docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+docker compose -f docker-compose.prod.yml up -d
 ```
 
 ---
@@ -405,7 +431,7 @@ web:
 **Not suitable for:**
 
 - Large-scale clusters
-- (That's Kubernetes' domain)
+  (That's Kubernetes' domain)
 
 </div>
 </div>
@@ -422,10 +448,8 @@ web:
 
 ## Step 1: Create Your Repository
 
-1. Visit [docker-tutorial](https://github.com/CompPsyUnion/docker-tutorial)
+1. Visit [docker-tutorial](https://github.com/CompPsyUnion/docker-tutorial) (https://github.com/CompPsyUnion/docker-tutorial)
 2. Click "Use this template" → "Create a new repository"
-
-![h:400](https://maas-log-prod.cn-wlcb.ufileos.com/anthropic/1a7bfde7-9714-43c4-b61a-00d6c63e3ba7/create-repo-btn.png?UCloudPublicKey=TOKEN_e15ba47a-d098-4fbd-9afc-a0dcf0e4e621&Expires=1772464696&Signature=R2+0IZsTDrkqOZkz9GoqQjmp7f4=)
 
 ---
 
@@ -444,16 +468,20 @@ web:
 
 ## Step 3: Explore Project Structure
 
-```text
+```bash
 .
-├── docker-compose.yml    # Docker Compose configuration
-├── frontend/             # Frontend service
+├── LICENSE
+├── README.md
+├── docker-compose.yml    # Compose configuration file
+├── flask_demo_site
 │   ├── Dockerfile
-│   └── ...
-├── backend/              # Backend service
-│   ├── Dockerfile
-│   └── ...
-└── README.md
+│   ├── README.md
+│   ├── README_EN.md
+│   └── app.py
+└── mysql_demo_site       # Demo Python service with mysql
+    ├── Dockerfile
+    ├── app.py
+    └── requirements.txt
 ```
 
 ---

@@ -1,0 +1,3 @@
+[submodule "Contents/GradientDecent"]
+	path = Contents/GradientDecent
+	url = https://github.com/calcury/gradient_decent_for_beginners

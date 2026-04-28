@@ -32,7 +32,7 @@ What do you do?
 
 ---
 
-## Option A: PowerPoint / Google Slides
+## Option A: PowerPoint
 
 Open PowerPoint. Pick a template.
 
@@ -47,9 +47,9 @@ Drag. Resize. Align. Repeat.
 
 "Make me a PPT about today's Marp lecture."
 
-You get... a wall of text, weird formatting, no design.
+You get... a wall of text, weird formatting, no design, not editable.
 
-> AI can write. But it can't **design slides**.
+> AI can write. But it can't **design slides** well yet.
 
 ---
 
@@ -78,6 +78,8 @@ Just **text → slides**.
 <!-- _class: lead -->
 
 # Enter Marp
+
+![vscode-extension-cover](image/Slides/vscode-extension-cover.png)
 
 ---
 
@@ -125,7 +127,7 @@ Open VSCode now. Follow along.
 ## Step 1: Install Marp Extension
 
 1. Open VSCode
-2. Go to Extensions (`Cmd+Shift+X`)
+2. Go to Extensions (`Ctrl+Shift+X` / `Cmd+Shift+X`)
 3. Search **"Marp for VS Code"**
 4. Click **Install** (Author: Marp Team)
 
@@ -159,7 +161,7 @@ Your Name
 
 ## Step 3: Preview
 
-Press `Cmd+Shift+V` (Mac) or `Ctrl+Shift+V` (Windows)
+Press `Ctrl+Shift+V` (Windows) / `Cmd+Shift+V` (Mac)
 
 > You should now see a fully rendered slide.
 
@@ -169,15 +171,27 @@ Yes, it's that simple.
 
 ## Step 4: Export
 
-1. `Cmd+Shift+P` → open Command Palette
-2. Type `Marp: Export`
-3. Choose format: **PDF / PPTX / HTML / PNG**
+<div class="columns">
+<div class="column">
 
-> From plain text to presentation in 4 steps.
+![vscode-marp-export](image/Slides/vscode-marp-export.png)
+
+</div>
+<div class="column">
+
+1. Click the Marp icon in the top right of the markdown workspace
+2. Select "Export slide deck..."
+3. Choose format:
+   **PDF / PPTX / HTML / PNG**
+
+> **Plain text -> Presentation** in 3 steps.
+
+</div>
+</div>
 
 ---
 
-## But Does It Look Good?
+## Does It Look Good?
 
 Marp has 3 built-in themes:
 
@@ -441,16 +455,17 @@ The Skill mindset works everywhere:
 - [ ] Install **Claude Code** in VSCode
 - [ ] Open this project folder
 - [ ] Try `/marp-slide` with any topic
-- [ ] Preview with `Cmd+Shift+V`
+- [ ] Preview with `Ctrl+Shift+V` / `Cmd+Shift+V`
 - [ ] Export via Command Palette → `Marp: Export`
 
 ---
 
 ## Resources
 
-- Marp: https://marp.app/
+- Marp: <https://marp.app/>
 - Marp VSCode Extension: search "Marp for VS Code"
-- Claude Code: https://claude.ai/code
+- Visual Studio Code: <https://code.visualstudio.com/>
+- Claude Code: <https://claude.ai/code>
 - This project's Skill: `.claude/skills/marp-slide/`
 
 ---

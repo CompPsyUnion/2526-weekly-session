@@ -6,7 +6,7 @@ Advanced features of Marp Core and Marpit.
 
 Feature to display list items progressively (animation effect).
 
-Official documentation: https://github.com/marp-team/marpit/tree/main/docs/fragmented-list
+Official documentation: <https://github.com/marp-team/marpit/tree/main/docs/fragmented-list>
 
 ### Basic Usage
 
@@ -32,13 +32,13 @@ When using `--html` option with Marp CLI, each item displays sequentially.
 
 - **Only effective in HTML output**: No effect in PDF/PPTX/images
 - **Presentation mode**: Works during browser presentations
-- **Marp for VS Code**: May not work in preview
+- **Marp for VSCode**: May not work in preview
 
 ## Math Notation (Marp Core Extension)
 
 Supports Pandoc-style math formulas. Rendered using KaTeX.
 
-Official: https://github.com/marp-team/marp-core#math-typesetting
+Official: <https://github.com/marp-team/marp-core#math-typesetting>
 
 ### Inline Math
 
@@ -85,13 +85,13 @@ $$
 
 - **KaTeX notation**: Subset of LaTeX syntax
 - **Unsupported notation**: Some LaTeX features not supported
-- **KaTeX official**: https://katex.org/docs/supported.html
+- **KaTeX official**: <https://katex.org/docs/supported.html>
 
 ## Emoji (Marp Core Extension)
 
 Supports GitHub Emoji notation.
 
-Official: https://github.com/marp-team/marp-core#emoji
+Official: <https://github.com/marp-team/marp-core#emoji>
 
 ### Usage
 
@@ -115,7 +115,7 @@ Rendered result: 😄 ❤️ 👍 ✨
 
 ### Emoji List
 
-Complete list: https://github.com/ikatyang/emoji-cheat-sheet
+Complete list: <https://github.com/ikatyang/emoji-cheat-sheet>
 
 ## Auto-scaling
 
@@ -190,7 +190,7 @@ Important content goes here
 
 ## Marp CLI Detailed Options
 
-Official: https://github.com/marp-team/marp-cli
+Official: <https://github.com/marp-team/marp-cli>
 
 ### Basic Commands
 
@@ -271,9 +271,9 @@ marp slide.md --images jpeg
 marp slide.md --images png --image-scale 2
 ```
 
-## Marp for VS Code
+## Marp for VSCode
 
-Official: https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode
+Official: <https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode>
 
 ### Enable
 
@@ -298,7 +298,7 @@ marp: true
 
 ### Settings
 
-Customizable in VS Code settings:
+Customizable in VSCode settings:
 
 ```json
 {
@@ -311,7 +311,7 @@ Customizable in VS Code settings:
 
 ## Automated Build with GitHub Actions
 
-Official: https://github.com/marketplace/actions/marp-action
+Official: <https://github.com/marketplace/actions/marp-action>
 
 ### Basic Workflow
 
@@ -432,10 +432,10 @@ section::before {
 
 ## Official References
 
-- **Marp Official Site**: https://marp.app/
-- **Marpit Directives**: https://marpit.marp.app/directives
-- **Image Syntax**: https://marpit.marp.app/image-syntax
-- **Theme CSS**: https://marpit.marp.app/theme-css
-- **Marp Core**: https://github.com/marp-team/marp-core
-- **Marp CLI**: https://github.com/marp-team/marp-cli
-- **VS Code Extension**: https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode
+- **Marp Official Site**: <https://marp.app/>
+- **Marpit Directives**: <https://marpit.marp.app/directives>
+- **Image Syntax**: <https://marpit.marp.app/image-syntax>
+- **Theme CSS**: <https://marpit.marp.app/theme-css>
+- **Marp Core**: <https://github.com/marp-team/marp-core>
+- **Marp CLI**: <https://github.com/marp-team/marp-cli>
+- **VSCode Extension**: <https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode>

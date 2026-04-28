@@ -10,6 +10,7 @@ Create professional, visually appealing Marp presentation slides with 7 pre-desi
 ## When to Use This Skill
 
 Use this skill when the user:
+
 - Requests to create presentation slides or Marp documents
 - Asks to "make slides look good" or "improve slide design"
 - Provides vague instructions like "良い感じにして" (make it nice) or "かっこよく" (make it cool)
@@ -23,6 +24,7 @@ Use this skill when the user:
 First, determine the appropriate theme based on the user's request and content.
 
 **Quick theme selection:**
+
 - **Technical/Developer content** → tech theme
 - **Business/Corporate** → business theme
 - **Creative/Event** → colorful or gradient theme
@@ -40,14 +42,22 @@ For detailed theme selection guidance, read `references/theme-selection.md`.
    - For advanced features (math, emoji): `references/advanced-features.md`
    - For custom themes: `references/theme-css-guide.md`
 
-2. Copy content from the appropriate template file:
-   - `assets/template-basic.md` - Default theme (most common)
-   - `assets/template-minimal.md` - Minimal theme
-   - `assets/template-colorful.md` - Colorful theme
-   - `assets/template-dark.md` - Dark mode theme
-   - `assets/template-gradient.md` - Gradient theme
-   - `assets/template-tech.md` - Tech/code theme
-   - `assets/template-business.md` - Business theme
+2. Use `@import` to load the theme CSS from the skill's assets directory — **do NOT embed inline CSS**:
+
+   ```markdown
+   <style>
+   @import '.claude/skills/marp-slide/assets/theme-tech.css';
+   </style>
+   ```
+
+   Available CSS files (relative to the output `.md` file):
+   - `assets/theme-default.css` - Default theme (most common)
+   - `assets/theme-minimal.css` - Minimal theme
+   - `assets/theme-colorful.css` - Colorful theme
+   - `assets/theme-dark.css` - Dark mode theme
+   - `assets/theme-gradient.css` - Gradient theme
+   - `assets/theme-tech.css` - Tech/code theme
+   - `assets/theme-business.css` - Business theme
 
 3. Read `references/best-practices.md` for quality guidelines
 
@@ -64,42 +74,49 @@ For detailed theme selection guidance, read `references/theme-selection.md`.
 ## Available Themes
 
 ### 1. Default Theme
+
 **Colors**: Beige background, navy text, blue headings
 **Style**: Clean, sophisticated with decorative lines
 **Use for**: General seminars, lectures, presentations
 **Template**: `template-basic.md`
 
 ### 2. Minimal Theme
+
 **Colors**: White background, gray text, black headings
 **Style**: Minimal decoration, wide margins, light fonts
 **Use for**: Content-focused presentations, academic talks
 **Template**: `template-minimal.md`
 
 ### 3. Colorful & Pop Theme
+
 **Colors**: Pink gradient background, multi-color accents
 **Style**: Vibrant gradients, bold fonts, rainbow accents
 **Use for**: Youth-oriented events, creative projects
 **Template**: `template-colorful.md`
 
 ### 4. Dark Mode Theme
+
 **Colors**: Black background, cyan/purple accents
 **Style**: Dark theme with glow effects, eye-friendly
 **Use for**: Tech presentations, evening talks, modern look
 **Template**: `template-dark.md`
 
 ### 5. Gradient Background Theme
+
 **Colors**: Purple/pink/blue/green gradients (varies per slide)
 **Style**: Different gradient per slide, white text, shadows
 **Use for**: Visual-focused, creative presentations
 **Template**: `template-gradient.md`
 
 ### 6. Tech/Code Theme
+
 **Colors**: GitHub-style dark background, blue/green accents
 **Style**: Code fonts, Markdown-style headers with # symbols
 **Use for**: Programming tutorials, tech meetups, developer content
 **Template**: `template-tech.md`
 
 ### 7. Business Theme
+
 **Colors**: White background, navy headings, blue accents
 **Style**: Corporate presentation style, top border, table support
 **Use for**: Business presentations, proposals, reports
@@ -119,10 +136,10 @@ For detailed theme selection guidance, read `references/theme-selection.md`.
    - If uncertain, consult `references/theme-selection.md`
    - Default to default theme if still unsure
 
-3. **Apply template**
-   - Load appropriate template from `assets/`
-   - CSS is already embedded - no external files needed
-   - Maintain template structure
+3. **Apply theme**
+   - Use `@import` to load the selected CSS from `assets/theme-*.css`
+   - The import path is relative to the output `.md` file location
+   - Example: `@import '.claude/skills/marp-slide/assets/theme-tech.css';`
 
 4. **Structure content**
    - Title slide: `<!-- _class: lead -->` + h1
@@ -176,12 +193,14 @@ When users give vague instructions like "良い感じにして", "かっこよ�
 For slides with images, consult `references/image-patterns.md` for detailed syntax.
 
 Common patterns:
+
 - **Side image**: `![bg right:40%](image.png)` - Image on right, text on left
 - **Centered**: `![w:600px](image.png)` - Centered with specific width
 - **Full background**: `![bg](image.png)` - Full-screen background
 - **Multiple images**: Multiple `![bg]` declarations
 
 Example lecture pattern:
+
 ```markdown
 ## Slide Title
 
@@ -195,6 +214,7 @@ Example lecture pattern:
 ## File Output
 
 Always save the final Marp file to `the project output directory` with `.md` extension:
+
 - `presentation.md`
 - `seminar-slides.md`
 - `lecture-materials.md`
@@ -202,8 +222,9 @@ Always save the final Marp file to `the project output directory` with `.md` ext
 ## Quality Checklist
 
 Before delivering slides, verify:
+
 - [ ] Theme selected appropriately for content
-- [ ] CSS theme is embedded in the file
+- [ ] CSS theme loaded via `@import` (not inline)
 - [ ] Title slide uses `<!-- _class: lead -->`
 - [ ] All h2 titles are concise (5-7 chars)
 - [ ] Bullet points are 3-5 items per slide
@@ -214,21 +235,25 @@ Before delivering slides, verify:
 ## References
 
 ### Core Documentation
+
 - **Marp syntax**: `references/marp-syntax.md` - Basic Marp/Marpit syntax (directives, frontmatter, pagination, etc.)
 - **Image patterns**: `references/image-patterns.md` - Official image syntax (bg, filters, split backgrounds)
 - **Theme CSS guide**: `references/theme-css-guide.md` - How to create custom themes based on Marpit specification
-- **Advanced features**: `references/advanced-features.md` - Math, emoji, fragmented lists, Marp CLI, VS Code
+- **Advanced features**: `references/advanced-features.md` - Math, emoji, fragmented lists, Marp CLI, VSCode
 - **Official themes**: `references/official-themes.md` - default, gaia, uncover themes documentation
 
 ### Quality & Selection Guides
+
 - **Theme selection**: `references/theme-selection.md` - How to choose the right theme for content
 - **Best practices**: `references/best-practices.md` - Quality guidelines for "cool" slides
 
 ### Templates & Assets
+
 - **Templates**: `assets/template-*.md` - Starting points with embedded CSS for each theme (7 themes)
-- **Standalone CSS**: `assets/theme-*.css` - CSS files for reference (already embedded in templates)
+- **Standalone CSS**: `assets/theme-*.css` - CSS files loaded via `@import` in the output `.md` file
 
 ### Official External Links
+
 - **Marp Official Site**: https://marp.app/
 - **Marpit Directives**: https://marpit.marp.app/directives
 - **Marpit Image Syntax**: https://marpit.marp.app/image-syntax

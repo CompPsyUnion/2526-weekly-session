@@ -2,7 +2,7 @@
 
 How to create custom themes based on the official Marpit theme CSS specification.
 
-Official documentation: https://marpit.marp.app/theme-css
+Official documentation: <https://marpit.marp.app/theme-css>
 
 ## Basic Theme Structure
 
@@ -95,6 +95,7 @@ section::after {
 ```
 
 **Available attributes**:
+
 - `data-marpit-pagination` - Current page number
 - `data-marpit-pagination-total` - Total page count
 
@@ -389,6 +390,7 @@ This method allows applying custom styles without using a theme.
 ## Official References
 
 For details, refer to official documentation:
-- **Theme CSS**: https://marpit.marp.app/theme-css
-- **Marpit API**: https://marpit-api.marp.app/
-- **Official Theme Implementation**: https://github.com/marp-team/marp-core/tree/main/themes
+
+- **Theme CSS**: <https://marpit.marp.app/theme-css>
+- **Marpit API**: <https://marpit-api.marp.app/>
+- **Official Theme Implementation**: <https://github.com/marp-team/marp-core/tree/main/themes>

@@ -1,0 +1,465 @@
+---
+marp: true
+theme: default
+paginate: true
+size: 16:9
+---
+
+<style>
+@import '.claude/skills/marp-slide/assets/theme-tech.css';
+</style>
+
+<!-- _class: lead -->
+<!-- _paginate: false -->
+
+# 10 Minutes to Stage
+
+**Zero Slides. Zero Panic.**
+
+Siyuan He
+
+---
+
+## T-minus 10 Minutes
+
+You're about to present in front of 50 people.
+
+Your topic is clear in your head.
+
+But you have **no slides**.
+
+What do you do?
+
+---
+
+## Option A: PowerPoint / Google Slides
+
+Open PowerPoint. Pick a template.
+
+Drag. Resize. Align. Repeat.
+
+> After 8 minutes: you have **2 slides** and a headache.
+> The problem isn't the tool. It's the **workflow**.
+
+---
+
+## Option B: Ask ChatGPT
+
+"Make me a PPT about today's Marp lecture."
+
+You get... a wall of text, weird formatting, no design.
+
+> AI can write. But it can't **design slides**.
+
+---
+
+## The Real Problem
+
+Traditional slide tools require you to:
+
+- **Manually layout** every element
+- **Design** color schemes and fonts
+- **Repeat** the same formatting for every slide
+
+> This is a **design task**, not a content task.
+
+---
+
+## What If...
+
+What if you could just **write**, and it automatically becomes slides?
+
+No dragging. No resizing. No design decisions.
+
+Just **text → slides**.
+
+---
+
+<!-- _class: lead -->
+
+# Enter Marp
+
+---
+
+## Marp in One Line
+
+```markdown
+---
+marp: true
+---
+
+# My Talk
+
+Speaker Name
+
+---
+
+## A Simple Point
+
+> **Markdown + `---` = Presentation**
+
+```
+
+That's it. Every `---` creates a new slide.
+
+---
+
+## Why This Changes Everything
+
+- **Write** in plain text — no GUI needed
+- **One file** = entire presentation
+- **Git-friendly** — track changes like code
+- **Export** to PDF, PPTX, HTML, PNG
+- **AI can generate it** — it's just text!
+
+---
+
+## Let's Get Hands-On
+
+Open VSCode now. Follow along.
+
+> We'll go from zero to slides in 5 minutes.
+
+---
+
+## Step 1: Install Marp Extension
+
+1. Open VSCode
+2. Go to Extensions (`Cmd+Shift+X`)
+3. Search **"Marp for VS Code"**
+4. Click **Install** (Author: Marp Team)
+
+> That's it. No config needed.
+
+---
+
+## Step 2: Create Your First File
+
+Create a new file called `demo.md` and type:
+
+```markdown
+---
+marp: true
+---
+
+# Hello Marp
+
+Your Name
+
+---
+
+## My First Slide
+
+- Point one
+- Point two
+- Point three
+```
+
+---
+
+## Step 3: Preview
+
+Press `Cmd+Shift+V` (Mac) or `Ctrl+Shift+V` (Windows)
+
+> You should now see a fully rendered slide.
+
+Yes, it's that simple.
+
+---
+
+## Step 4: Export
+
+1. `Cmd+Shift+P` → open Command Palette
+2. Type `Marp: Export`
+3. Choose format: **PDF / PPTX / HTML / PNG**
+
+> From plain text to presentation in 4 steps.
+
+---
+
+## But Does It Look Good?
+
+Marp has 3 built-in themes:
+
+- **default** — clean white
+- **gaia** — modern flat
+- **uncover** — minimal
+
+And you can use **custom CSS** for anything.
+
+> Like this slide deck — it's all custom CSS.
+
+---
+
+## Images & Layouts
+
+```markdown
+## Key Insight
+
+![bg right:40%](chart.png)
+
+- Marp converts Markdown to slides
+- AI generates the content
+- Skills ensure consistent quality
+```
+
+Left: text. Right: image. One line of code.
+
+---
+
+## So Now We Have Marp
+
+We can write slides in plain text.
+
+But... we still need to **write the content**.
+
+> Who's going to type 30 slides in 8 minutes?
+
+---
+
+<!-- _class: lead -->
+
+# Enter AI
+
+---
+
+## AI + Markdown = Natural Fit
+
+AI is **great at generating text**.
+
+Markdown is **just text**.
+
+So AI can generate an entire slide deck?
+
+> Let's try it.
+
+---
+
+## The AI Output Problem
+
+"Hey Claude, make me 30 slides about this Marp lecture."
+
+Result:
+
+- Inconsistent formatting
+- Random heading sizes
+- Some slides have 2 bullets, some have 15
+- No visual coherence
+- Different "style" every time
+
+> It works. But it's **unpredictable**.
+
+---
+
+## What's Going Wrong?
+
+The AI has no idea about:
+
+- How many bullets per slide
+- What theme to use
+- What CSS looks like
+- What "good" slides look like
+
+It's like hiring someone without a **style guide**.
+
+---
+
+<!-- _class: lead -->
+
+# What Shall We Do?
+
+---
+
+## What If AI Had a "Job Manual"?
+
+Imagine giving the AI:
+
+- **Templates** — predefined structures
+- **Rules** — "3-5 bullets per slide"
+- **Theme files** — CSS it can reference
+- **Quality checks** — standards to meet
+
+> This is what **Skills** are.
+
+---
+
+## What Are Skills?
+
+Skills are a mechanism (pioneered by Anthropic) to:
+
+- **Constrain** AI output to specific formats
+- **Provide** reference docs and templates
+- **Ensure** consistent, reproducible results
+
+> Think of it as a **style guide for AI**.
+
+---
+
+## How Skills Work
+
+```text
+You describe what you want
+        ↓
+Skill loads templates + rules
+        ↓
+AI generates within constraints
+        ↓
+Structured, consistent output
+```
+
+No randomness. No surprises.
+
+---
+
+## The marp-slide Skill
+
+In this project's `.claude/skills/marp-slide/`:
+
+- **7 theme CSS files** — ready to use
+- **Syntax references** — complete Marp docs
+- **Best practices** — quality guidelines
+- **Image patterns** — common layouts
+
+> Everything the AI needs to make good slides.
+
+---
+
+## How to Use It
+
+In VSCode with Claude Code:
+
+```text
+Step 1: Open Claude Code
+Step 2: Type /marp-slide
+Step 3: Describe your content
+Step 4: Done.
+```
+
+Claude reads the Skill, picks a theme, follows the rules, and outputs a `.md` file.
+
+---
+
+## Live Demo
+
+```text
+/marp-slide
+Make a 15-slide presentation about
+"How to use Marp + AI to make slides"
+using the tech theme.
+```
+
+AI will:
+
+1. Load the tech theme CSS via `@import`
+2. Structure content with proper headings
+3. Keep 3-5 bullets per slide
+4. Output a complete `.md` file
+
+---
+
+## The `@import` Trick
+
+Instead of embedding 200 lines of CSS in every file:
+
+```markdown
+<style>
+@import '.claude/skills/marp-slide/assets/theme-tech.css';
+</style>
+```
+
+One line. Clean. Reusable.
+
+> That's exactly what this slide deck does.
+
+---
+
+## Before vs. After Skills
+
+| | Without Skill | With Skill |
+|---|---|---|
+| Theme | Random or none | Consistent |
+| Structure | Varies wildly | Fixed template |
+| Bullets | 2 to 20 per slide | 3-5 per slide |
+| Quality | Lottery | Reproducible |
+| Time to fix | 30 min | 0 min |
+
+---
+
+<!-- _class: lead -->
+
+# The Real Lesson
+
+---
+
+## It's Not About "Using AI"
+
+Most people:
+
+> "AI, make me a PPT" → bad result → "AI doesn't work"
+
+The problem isn't the AI.
+
+The problem is **how you use it**.
+
+---
+
+## The Key Insight
+
+> ~~Make AI smarter~~ **Give AI clearer boundaries**
+
+- A good Skill = a good **job manual**
+- Constrain the **freedom**, increase the **consistency**
+- Same input → same quality, every time
+
+---
+
+## Practical Tips
+
+- **Specify the theme** — "use tech theme"
+- **Give a page count** — "around 15 slides"
+- **Provide an outline** — list the key points
+- **Demand consistency** — "3-5 bullets per slide"
+- **Iterate** — generate first, then refine
+
+---
+
+## Beyond Marp
+
+The Skill mindset works everywhere:
+
+- Writing docs → create a doc template Skill
+- Writing code → create a code style Skill
+- Writing reports → create a report format Skill
+
+> Core idea: **trade freedom for reliability**.
+
+---
+
+## Setup Checklist
+
+- [ ] Install **Marp for VSCode** extension
+- [ ] Install **Claude Code** in VSCode
+- [ ] Open this project folder
+- [ ] Try `/marp-slide` with any topic
+- [ ] Preview with `Cmd+Shift+V`
+- [ ] Export via Command Palette → `Marp: Export`
+
+---
+
+## Resources
+
+- Marp: https://marp.app/
+- Marp VSCode Extension: search "Marp for VS Code"
+- Claude Code: https://claude.ai/code
+- This project's Skill: `.claude/skills/marp-slide/`
+
+---
+
+<!-- _class: lead -->
+<!-- _paginate: false -->
+
+# T-minus 0: Ready to Present
+
+**Q & A**
+
+He Siyuan · Tech Department

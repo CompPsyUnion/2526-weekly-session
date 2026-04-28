@@ -1,0 +1,16 @@
+{
+    "markdownlint.config": {
+        "no-inline-html": false,
+        "first-line-heading": false,
+        "no-emphasis-as-heading": false,
+        "no-trailing-punctuation": false
+    },
+    "cSpell.words": [
+        "Consolas",
+        "Fira",
+        "kdown",
+        "Marp",
+        "Noto",
+        "Siyuan"
+    ]
+}

@@ -38,6 +38,7 @@ size: 16:9
 ```
 
 Available sizes:
+
 - `16:9` (1280x720, default)
 - `4:3` (960x720)
 - `A4` (210mm x 297mm)
@@ -55,6 +56,7 @@ To change settings per slide, use `<!-- directive_name: value -->` format:
 ```
 
 **Meaning of underscore `_`**:
+
 - Without `_`: Apply to all following slides
 - With `_`: Apply to current slide only
 
@@ -110,11 +112,13 @@ paginate: true
 Display position and style vary by theme.
 
 Hide on specific slide:
+
 ```markdown
 <!-- paginate: false -->
 ```
 
 Or:
+
 ```markdown
 <!-- _paginate: false -->
 ```
@@ -199,10 +203,10 @@ Directives are also written in comment format:
 
 For details, refer to official documentation:
 
-- **Directives List**: https://marpit.marp.app/directives
-- **Marp Core Features**: https://github.com/marp-team/marp-core
-- **Theme CSS Specification**: https://marpit.marp.app/theme-css
-- **Official Site**: https://marp.app/
+- **Directives List**: <https://marpit.marp.app/directives>
+- **Marp Core Features**: <https://github.com/marp-team/marp-core>
+- **Theme CSS Specification**: <https://marpit.marp.app/theme-css>
+- **Official Site**: <https://marp.app/>
 
 ## Common Configuration Examples
 

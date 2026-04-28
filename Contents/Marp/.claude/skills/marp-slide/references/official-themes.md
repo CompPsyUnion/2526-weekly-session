@@ -2,7 +2,7 @@
 
 Explanation of the 3 official themes included in Marp Core.
 
-Official implementation: https://github.com/marp-team/marp-core/tree/main/themes
+Official implementation: <https://github.com/marp-team/marp-core/tree/main/themes>
 
 ## Official Theme List
 
@@ -400,6 +400,6 @@ Accuracy: 95.3%
 
 ## Official References
 
-- **Official Theme Implementation**: https://github.com/marp-team/marp-core/tree/main/themes
-- **Marp Core README**: https://github.com/marp-team/marp-core
-- **Theme CSS Specification**: https://marpit.marp.app/theme-css
+- **Official Theme Implementation**: <https://github.com/marp-team/marp-core/tree/main/themes>
+- **Marp Core README**: <https://github.com/marp-team/marp-core>
+- **Theme CSS Specification**: <https://marpit.marp.app/theme-css>

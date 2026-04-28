@@ -2,7 +2,7 @@
 
 Image placement and styling methods based on official Marpit image syntax.
 
-Official documentation: https://marpit.marp.app/image-syntax
+Official documentation: <https://marpit.marp.app/image-syntax>
 
 ## Basic Image Insertion
 
@@ -26,11 +26,13 @@ Marp allows adding size keywords to images:
 ```
 
 **Supported units**:
+
 - `px` - Pixels
 - `%` - Percent
 - `em`, `rem`, `cm`, `mm`, `in`, `pt`, `pc`
 
 **Abbreviations**:
+
 - `w:` = `width:`
 - `h:` = `height:`
 
@@ -285,4 +287,5 @@ Subdued background with blur and darkness
 ## Official Reference
 
 For details, refer to official documentation:
-- **Image syntax**: https://marpit.marp.app/image-syntax
+
+- **Image syntax**: <https://marpit.marp.app/image-syntax>

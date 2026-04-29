@@ -305,27 +305,28 @@ Skills are a mechanism (pioneered by Anthropic) to:
 - **Provide** reference docs and templates
 - **Ensure** consistent, reproducible results
 
-> Think of it as a **style guide for AI**.
+> Think of it as a **style guide for AI**
+> or "**pre-made** prompts"
 
 ---
 
 ## How Skills Work
 
 ```text
-You describe what you want
-        ↓
-Skill loads templates + rules
-        ↓
+You specify the Skill & describe what you want
+            ↓
+AI loads templates + rules according to the Skill
+            ↓
 AI generates within constraints
-        ↓
+            ↓
 Structured, consistent output
 ```
 
-No randomness. No surprises.
+**Less randomness & Less negative surprises.**
 
 ---
 
-## The marp-slide Skill
+## The `marp-slide` Skill
 
 In this project's `.claude/skills/marp-slide/`:
 
@@ -338,22 +339,42 @@ In this project's `.claude/skills/marp-slide/`:
 
 ---
 
-## How to Use It
+## How to Use It? Specific Steps?
 
-In VSCode with Claude Code:
+1. Let AI read the `SKILL.md` file
+2. Ask it to make a slide deck on any topic
+3. Direct it to use a specific theme and follow the rules
+4. The agent will output a `.md` file ready to preview and export
 
-```text
-Step 1: Open Claude Code
-Step 2: Type /marp-slide
-Step 3: Describe your content
-Step 4: Done.
-```
-
-Claude reads the Skill, picks a theme, follows the rules, and outputs a `.md` file.
+> Generally, let AI read the Skill, pick a theme, follow the rules, and output a `.md` file.
 
 ---
 
-## Live Demo
+## Claude Code Instructions
+
+![bg right:50%](image/Slides/marp-slide-skill-use-cc.png)
+
+1. Open the `Marp` folder as your vscode workspace / `cd` into it in your terminal
+2. Open Claude Code sidebar /
+   in your terminal
+3. Type `/marp-slide`
+
+---
+
+## GitHub Copilot
+
+![bg right:50%](image/Slides/marp-slide-use-copilot.png)
+
+1. Open the Copilot Chat panel, if not opened, click the icon in the top right of VSCode
+2. Drag and drop the `SKILL.md` file from the `marp-slide` folder to the chat input
+
+---
+
+## The Prompt
+
+![bg right:50%](image/Slides/marp-slide-skill-prompt.png)
+
+Describe your content (we've prepared a prompt for you):
 
 ```text
 /marp-slide
@@ -362,12 +383,16 @@ Make a 15-slide presentation about
 using the tech theme.
 ```
 
+---
+
+## What Happens Behind the Scenes
+
 AI will:
 
 1. Load the tech theme CSS via `@import`
 2. Structure content with proper headings
-3. Keep 3-5 bullets per slide
-4. Output a complete `.md` file
+3. Keep proper number of bullets per slide
+4. Gradually generate a complete `.md` file
 
 ---
 
@@ -381,9 +406,9 @@ Instead of embedding 200 lines of CSS in every file:
 </style>
 ```
 
-One line. Clean. Reusable.
+Clean & Reusable.
 
-> That's exactly what this slide deck does.
+> That's exactly how this slide deck does.
 
 ---
 
@@ -423,7 +448,7 @@ The problem is **how you use it**.
 
 - A good Skill = a good **job manual**
 - Constrain the **freedom**, increase the **consistency**
-- Same input → same quality, every time
+- Same input → Similar quality, every time
 
 ---
 
@@ -449,17 +474,6 @@ The Skill mindset works everywhere:
 
 ---
 
-## Setup Checklist
-
-- [ ] Install **Marp for VSCode** extension
-- [ ] Install **Claude Code** in VSCode
-- [ ] Open this project folder
-- [ ] Try `/marp-slide` with any topic
-- [ ] Preview with `Ctrl+Shift+V` / `Cmd+Shift+V`
-- [ ] Export via Command Palette → `Marp: Export`
-
----
-
 ## Resources
 
 - Marp: <https://marp.app/>
@@ -475,6 +489,4 @@ The Skill mindset works everywhere:
 
 # T-minus 0: Ready to Present
 
-**Q & A**
-
-He Siyuan · Tech Department
+## **Q & A**

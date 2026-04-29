@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marp Slide Launcher</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 520px;
+      width: 100%;
+      padding: 32px;
+    }
+    h1 {
+      color: #58a6ff;
+      font-size: 28px;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    h1::before { content: '# '; color: #7ee787; }
+    p.subtitle {
+      color: #8b949e;
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+    label {
+      display: block;
+      font-size: 14px;
+      color: #8b949e;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    input {
+      width: 100%;
+      padding: 12px 16px;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      color: #c9d1d9;
+      font-size: 16px;
+      font-family: 'Fira Code', 'Consolas', monospace;
+      margin-bottom: 20px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input:focus { border-color: #58a6ff; }
+    input::placeholder { color: #484f58; }
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #238636;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover { background: #2ea043; }
+    .preview {
+      margin-top: 24px;
+      padding: 16px;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      font-family: 'Fira Code', 'Consolas', monospace;
+      font-size: 13px;
+      color: #7ee787;
+      word-break: break-all;
+      line-height: 1.6;
+    }
+    .preview span { color: #8b949e; }
+    .error {
+      margin-top: 12px;
+      padding: 12px 16px;
+      background: #3d1a1a;
+      border: 1px solid #6e3030;
+      border-radius: 6px;
+      color: #f85149;
+      font-size: 14px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Marp Slide Launcher</h1>
+    <p class="subtitle">Enter your details to open your Marp presentation</p>
+
+    <label for="username">GitHub Username</label>
+    <input type="text" id="username" placeholder="e.g. hnrobert" oninput="updatePreview()">
+
+    <label for="repo">Repository Name</label>
+    <input type="text" id="repo" placeholder="e.g. Marp" oninput="updatePreview()">
+
+    <label for="filename">HTML Filename</label>
+    <input type="text" id="filename" placeholder="e.g. Slides.html" oninput="updatePreview()">
+
+    <button onclick="openSlides()">Open Slides</button>
+
+    <div class="error" id="error"></div>
+
+    <div class="preview" id="preview">
+      <span>URL:</span> https://<span id="p-user">...</span>.github.io/<span id="p-repo">...</span>/<span id="p-file">...</span>
+    </div>
+  </div>
+
+  <script>
+    function updatePreview() {
+      const user = document.getElementById('username').value || '...';
+      const repo = document.getElementById('repo').value || '...';
+      const file = document.getElementById('filename').value || '...';
+      document.getElementById('p-user').textContent = user;
+      document.getElementById('p-repo').textContent = repo;
+      document.getElementById('p-file').textContent = file;
+      document.getElementById('error').style.display = 'none';
+    }
+
+    function openSlides() {
+      const username = document.getElementById('username').value.trim();
+      const repo = document.getElementById('repo').value.trim();
+      const filename = document.getElementById('filename').value.trim();
+      const errEl = document.getElementById('error');
+
+      if (!username || !repo || !filename) {
+        errEl.textContent = 'Please fill in all fields.';
+        errEl.style.display = 'block';
+        return;
+      }
+
+      const url = `https://${username}.github.io/${repo}/${filename}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>

@@ -412,33 +412,18 @@ Clean & Reusable.
 
 ---
 
-## Before vs. After Skills
-
-| | Without Skill | With Skill |
-|---|---|---|
-| Theme | Random or none | Consistent |
-| Structure | Varies wildly | Fixed template |
-| Bullets | 2 to 20 per slide | 3-5 per slide |
-| Quality | Lottery | Reproducible |
-| Time to fix | 30 min | 0 min |
-
----
-
 <!-- _class: lead -->
 
 # The Real Lesson
 
----
-
 ## It's Not About "Using AI"
 
-Most people:
+**Most people:**
 
 > "AI, make me a PPT" → bad result → "AI doesn't work"
 
-The problem isn't the AI.
-
-The problem is **how you use it**.
+**The problem** isn't the AI.
+The problem is **how people use it**.
 
 ---
 
@@ -471,6 +456,131 @@ The Skill mindset works everywhere:
 - Writing reports → create a report format Skill
 
 > Core idea: **trade freedom for reliability**.
+
+---
+
+## Publish Your Slides to the Web
+
+Now let's put your slides online — so anyone can view them.
+
+---
+
+## Step 5: Export as HTML
+
+1. `Ctrl+Shift+P` / `Cmd+Shift+P` → Command Palette
+2. Type `Marp: Export slide deck`
+3. Choose **HTML**
+
+> This creates a self-contained `.html` file with everything embedded.
+
+![bg right:40%](image/Slides/export-html.png)
+
+---
+
+## Step 6: Create a Git Repository
+
+In VSCode:
+
+1. Open the folder containing your slides
+2. `Ctrl+Shift+P` / `Cmd+Shift+P` → `Git: Initialize Repository`
+3. Your project is now a Git repo
+
+![bg right:40%](image/Slides/git-init.png)
+
+---
+
+## Step 7: Commit Everything
+
+1. Go to Source Control (`Ctrl+Shift+G` / `Cmd+Shift+G`)
+2. Stage all files (click `+` next to each file)
+3. Type a commit message: `"Initial commit"`
+4. Click **Commit**
+
+![bg right:40%](image/Slides/git-commit.png)
+
+---
+
+## Step 8: Publish to GitHub
+
+1. Click **Publish to GitHub** in Source Control
+2. Choose **Public** repository
+3. Confirm — VSCode pushes everything automatically
+
+> Your slides are now on GitHub!
+
+![bg right:40%](image/Slides/github-publish.png)
+
+---
+
+## Now: View Your Slides Online
+
+Your slides are at:
+
+```text
+https://<username>.github.io/<repo-name>/<html-file>.html
+```
+
+But remembering that URL is annoying...
+
+> What if we had a launcher page?
+
+---
+
+## The Launcher Page
+
+We'll create an `index.html` that:
+
+1. Asks for your **GitHub username**
+2. Asks for your **repository name**
+3. Asks for your **HTML filename**
+4. Opens your slides in a new browser tab
+
+> A simple HTML page — no server needed.
+
+---
+
+## Create `index.html`
+
+Put this file in your repository root:
+
+```html
+<!-- placeholder: full code shown on next slide -->
+```
+
+Commit and push it to GitHub.
+
+![bg right:40%](image/Slides/launcher-page.png)
+
+---
+
+## How It Works
+
+```text
+User enters:
+  → GitHub username: "siyuan-he"
+  → Repo name: "my-slides"
+  → HTML file: "Slides.html"
+
+Page opens:
+  → https://siyuan-he.github.io/my-slides/Slides.html
+```
+
+> One page to rule all your Marp presentations.
+
+![bg right:40%](image/Slides/launcher-flow.png)
+
+---
+
+## Try It Out
+
+1. Open your `index.html` on GitHub Pages
+2. Enter your details
+3. Click **Open**
+4. Your slides open in a new tab
+
+> Congratulations — your Marp slides are live on the internet.
+
+![bg right:40%](image/Slides/launcher-demo.png)
 
 ---
 

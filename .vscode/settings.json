@@ -55,7 +55,8 @@
         "no-emphasis-as-heading": false,
         "no-inline-html": false,
         "no-bare-urls": false,
-        "first-line-h1": false
+        "first-line-h1": false,
+        "no-trailing-punctuation": false
     },
     "markdown.marp.exportType": "pdf",
     "markdown.marp.html": "all",

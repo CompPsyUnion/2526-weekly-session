@@ -37,7 +37,7 @@ This guide tells you how to claim tasks (issues), how to pick up work, the exact
 
    - Session materials, images, and related assets must be placed under `Contents/<your-course>`.
    - In `Contents/<your-course>` add a `README.md` that describes the course outline and goals.
-   - Folder naming: use PascalCase for directories under `Contents/`, e.g. `LinearAlgebra`, `MachineLearning`.
+   - Folder naming: directories under `Contents/` follow the format `S##-YYYYMMDD-<CourseName>` — the session sequence number (`S01`–`S14`), the date the session was held, then the course/topic name in PascalCase. Example: `S09-20260306-Docker`.
    - Use lowercase, kebab-case filenames for individual files, e.g. `vscode-lecture.md`.
    - If you have images, put them in `Contents/<your-course>/images/` and reference them from your markdown.
 
@@ -136,7 +136,7 @@ This guide tells you how to claim tasks (issues), how to pick up work, the exact
 
    - 会话材料、图片等都应该放在 `Contents/<你的课程>` 下。
    - 在 `Contents/<你的课程>` 添加一个 `README.md` 介绍课程大纲和目标。
-   - 文件夹命名：`Contents/` 下的目录请使用大驼峰（PascalCase），例如 `LinearAlgebra`、`MachineLearning`。
+   - 文件夹命名：`Contents/` 下的目录遵循 `S##-YYYYMMDD-<课程名>` 格式——Session 序号（`S01`–`S14`）、该场举办日期、课程/主题名（PascalCase）。示例：`S09-20260306-Docker`。
    - 其他文件名建议使用小写与中横线，例如 `vscode-lecture.md`。
    - 如有图片，放在 `Contents/<你的课程>/images/`，然后在你的 markdown 中引用即可。
 

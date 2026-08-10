@@ -268,4 +268,4 @@ vector<int> dijkstra(int start, const vector<vector<pair<int, int>>>& graph) {
 | 动态规划 | 状态转移   | 优化与计数     |
 | 图论     | 路径与连通 | 网络、最短路   |
 
-读完这部分内容之后，可以回到我们的 [课程路线](../../Routes/S2/) 页面
+读完这部分内容之后，可以回到我们的 [课程路线](../../Routes/S02/) 页面

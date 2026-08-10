@@ -1,6 +1,6 @@
-[submodule "Contents/GradientDescent"]
-	path = Contents/GradientDescent
+[submodule "Contents/S10-20260313-GradientDescent"]
+	path = Contents/S10-20260313-GradientDescent
 	url = https://github.com/calcury/gradient_descent_for_beginners
-[submodule "Contents/Marp-Tutorial"]
-	path = Contents/Marp-Tutorial
+[submodule "Contents/S14-20260430-Marp-Tutorial"]
+	path = Contents/S14-20260430-Marp-Tutorial
 	url = git@github.com:hnrobert/Marp-Tutorial

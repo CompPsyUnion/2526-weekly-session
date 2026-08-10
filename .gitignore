@@ -7,3 +7,12 @@
 .venv
 .pytest_cache
 __pycache__
+
+# Playwright MCP download artifacts
+.playwright-mcp/
+
+# Internal / guest / third-party slides — kept locally but NOT tracked in the repo
+# (guest talks marked "internal only" on Moodle, and the Career Office further-study session)
+Contents/S04-20251114-GuestSharing/
+Contents/S07-20251205-GuestSharing/
+Contents/S13-20260423-FurtherStudy/

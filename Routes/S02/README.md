@@ -1,12 +1,12 @@
-# Little Byte Challenge Workshop - S2
+# Session 02 — 2025-10-24 · Little Byte Challenge Workshop
 
-Welcome to the Little Byte Challenge Workshop for Season 2! This workshop is designed to help you enhance your coding skills through a series of challenges and projects.
+一场算法向的 Workshop，介绍了赛制与编译评测环境，并对快读快写、复杂度分析、模拟、高精度、贪心、动态规划、图论等竞赛语法进行了梳理。
 
 ## Workshop Structure
 
 ### 赛制解析
 
-#### ICPC 赛制
+- ICPC 赛制
 
 ### 竞赛环境
 
@@ -26,10 +26,10 @@ Welcome to the Little Byte Challenge Workshop for Season 2! This workshop is des
 
 ### 比赛安排
 
-1. 正式 PDF 题面将于`2025-10-25 13:00 UTC+8`发布，OJ 会同步显示。
-2. 赛时`Clarification`将会同时通过比赛页面和现场提示发布，请务必留意。同时可以使用提问功能或举手提问。
-3. 赛时榜单将于比赛结束前 1h，即`2025-10-25 17:00 UTC+8`锁定，期间仅显示通过情况，榜单不会再更新
-4. 如果在比赛开始后 2h 内离场，即`2025-10-25 15:00 UTC+8`前离场，**你将不会获得任何红色学分**。
+1. 正式 PDF 题面将于 `2025-10-25 13:00 UTC+8` 发布，OJ 会同步显示。
+2. 赛时 `Clarification` 将会同时通过比赛页面和现场提示发布，请务必留意。同时可以使用提问功能或举手提问。
+3. 赛时榜单将于比赛结束前 1h，即 `2025-10-25 17:00 UTC+8` 锁定，期间仅显示通过情况，榜单不会再更新。
+4. 如果在比赛开始后 2h 内离场，即 `2025-10-25 15:00 UTC+8` 前离场，**你将不会获得任何红色学分**。
 
 ## 常用竞赛语法
 
@@ -41,13 +41,13 @@ Welcome to the Little Byte Challenge Workshop for Season 2! This workshop is des
 - 动态规划
 - 图论
 
-详见 [../../Contents/AlgoWorkshop/README.md](../../Contents/AlgoWorkshop/README.md)
+详见 [AlgoWorkshop](../../Contents/S02-20251024-AlgoWorkshop/README.md)
 
 ## Online Judge 和例题解析
 
 ### Online Judge 的使用和测试
 
-请打开 [https://oj.hnrobert.space](https://oj.hnrobert.space)
+请打开 <https://oj.hnrobert.space>
 
 ### 评测机状态
 
@@ -72,5 +72,3 @@ Welcome to the Little Byte Challenge Workshop for Season 2! This workshop is des
 2. 【本地保存】
 3. 【比赛纪律】
 4. 【OI Wiki】
-
-## 附件

@@ -15,7 +15,7 @@ This repository archives the materials, slides and notes of the **CPU Tech Depar
 ### Sessions at a glance
 
 | # | Date | Topic | Speakers | Route |
-|---|------|-------|----------|-------|
+| --- | ------ | ------- | ---------- | ------- |
 | S01 | 2025-10-17 | Basic: VSCode, Markdown, Git & GitHub | Siyuan HE, Lijie ZHOU, Baicen LIU | [S01](./Routes/S01) |
 | S02 | 2025-10-24 | Little Byte Challenge Workshop | — | [S02](./Routes/S02) |
 | S03 | 2025-10-31 | Basic: GitHub; VSCode × Discord | Baicen LIU, Siyuan HE | [S03](./Routes/S03) |
@@ -71,21 +71,21 @@ git submodule update --init
 ### 周常一览
 
 | # | 日期 | 主题 | 主讲人 | 路由 |
-|---|------|------|--------|------|
-| S01 | 2025-10-17 | Basic：VSCode、Markdown、Git & GitHub | 何思源、周立杰、刘百辰 | [S01](./Routes/S01) |
+| --- | ------ | ------ | -------- | ------ |
+| S01 | 2025-10-17 | Basic：VSCode、Markdown、Git & GitHub | 何思源、周立杰、刘柏岑 | [S01](./Routes/S01) |
 | S02 | 2025-10-24 | Little Byte Challenge Workshop | — | [S02](./Routes/S02) |
-| S03 | 2025-10-31 | Basic：GitHub 入门；VSCode × Discord | 刘百辰、何思源 | [S03](./Routes/S03) |
+| S03 | 2025-10-31 | Basic：GitHub 入门；VSCode × Discord | 刘柏岑、何思源 | [S03](./Routes/S03) |
 | S04 | 2025-11-14 | 嘉宾：From UNNC to Tech Giants in the Era of AI | 熊军 | [S04](./Routes/S04) |
 | S05 | 2025-11-21 | Research Journey；GitHub Actions | 张珈译、何思源 | [S05](./Routes/S05) |
-| S06 | 2025-11-28 | Basic：Linux；SSH | 吕宏希、刘百辰 | [S06](./Routes/S06) |
+| S06 | 2025-11-28 | Basic：Linux；SSH | 吕鸿曦、刘柏岑 | [S06](./Routes/S06) |
 | S07 | 2025-12-05 | 嘉宾：A Beginner's Guide to AI Research | 苏明澈 | [S07](./Routes/S07) |
-| S08 | 2025-12-12 | 随机化算法与模拟退火 | 张亦鸣 | [S08](./Routes/S08) |
-| S09 | 2026-03-06 | Docker and Docker Compose | 曹家宝、何思源 | [S09](./Routes/S09) |
-| S10 | 2026-03-13 | Talks：技术实习；梯度下降 | 刘百辰、蒋昀祺 | [S10](./Routes/S10) |
-| S11 | 2026-03-27 | AI Coding Workshop | 刘百辰 | [S11](./Routes/S11) |
-| S12 | 2026-04-17 | Talks：Slidev；电脑急救指南 | 孙翔卿、沈知睿 | [S12](./Routes/S12) |
+| S08 | 2025-12-12 | 随机化算法与模拟退火 | 张艺铭 | [S08](./Routes/S08) |
+| S09 | 2026-03-06 | Docker and Docker Compose | 曹佳宝、何思源 | [S09](./Routes/S09) |
+| S10 | 2026-03-13 | Talks：技术实习；梯度下降 | 刘柏岑、蒋圣钦 | [S10](./Routes/S10) |
+| S11 | 2026-03-27 | AI Coding Workshop | 刘柏岑 | [S11](./Routes/S11) |
+| S12 | 2026-04-17 | Talks：Slidev；电脑急救指南 | 孙湘青、沈郅睿 | [S12](./Routes/S12) |
 | S13 | 2026-04-23 | Spotlight on CS 升学（与 Career Office） | 5 位高年级同学 | [S13](./Routes/S13) |
-| S14 | 2026-04-30 | Agentic AI；Marp | 刘百辰、何思源 | [S14](./Routes/S14) |
+| S14 | 2026-04-30 | Agentic AI；Marp | 刘柏岑、何思源 | [S14](./Routes/S14) |
 
 ### 仓库结构
 
